@@ -1,30 +1,30 @@
 const apiKey = "7lki27i8glz6d0";
 var searchBtn = $(".btn");
 
-// pull the search input from index page and give it a variable in our Java Script
-var urlParams = new URLSearchParams(window.location.search);
-var searchQuery = urlParams.get("searchQuery");
-console.log(searchQuery);
-// Get a reference to the form
-var form = document.getElementById("options");
-// click eevent for search/submit button
-$(function () {
-  searchBtn.on("click", function (event) {
-    event.preventDefault();
+// // pull the search input from index page and give it a variable in our Java Script
+// var urlParams = new URLSearchParams(window.location.search);
+// var searchQuery = urlParams.get("searchQuery");
+// console.log(searchQuery);
+// // Get a reference to the form
+// var form = document.getElementById("options");
+// // click eevent for search/submit button
+// $(function () {
+//   searchBtn.on("click", function (event) {
+//     event.preventDefault();
 
-    searchInput = document.getElementById("input").value;
-    console.log(searchInput);
-    console.log("button Clicked");
-    // fetching longitude and lattude of input city
-  });
-});
+//     searchInput = document.getElementById("input").value;
+//     console.log(searchInput);
+//     console.log("button Clicked");
+//     // fetching longitude and lattude of input city
+//   });
+// });
 
 // Add an event listener to the form's submit event
 form.addEventListener("submit", function (event) {
   // Prevent the form from submitting
   event.preventDefault();
 
-  var searchInput = document.getElementById("search-bar");
+  var searchInput = document.getElementById("search-bar").value;
   //the selected currency
   var currency = document.getElementById("displayCurrency").value;
 
@@ -82,7 +82,7 @@ form.addEventListener("submit", function (event) {
 
   // Perform any additional processing or calculations here
   fetch(
-    `https://www.numbeo.com/api/city_cost_estimator?api_key=${apiKey}&query=${searchQuery}&houesehold_members=${members}&children=${childCount}&include_rent=${rent}&currency=${currency}`
+    `https://www.numbeo.com/api/city_cost_estimator?api_key=${apiKey}&query=${searchInput}&houesehold_members=${members}&children=${childCount}&include_rent=${rent}&currency=${currency}`
   )
     .then((response) => response.json())
     .then((data) => {
