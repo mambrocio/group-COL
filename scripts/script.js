@@ -1,12 +1,13 @@
 const apiKey = "7lki27i8glz6d0";
 var searchBtn = $(".btn");
+var form = document.getElementById("options");
 
 // // pull the search input from index page and give it a variable in our Java Script
 // var urlParams = new URLSearchParams(window.location.search);
 // var searchQuery = urlParams.get("searchQuery");
 // console.log(searchQuery);
 // // Get a reference to the form
-// var form = document.getElementById("options");
+//
 // // click eevent for search/submit button
 // $(function () {
 //   searchBtn.on("click", function (event) {
