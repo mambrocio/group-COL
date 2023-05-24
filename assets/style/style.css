@@ -1,0 +1,107 @@
+/* Root Rules */
+
+:root{ 
+	/* Preferred Font Size Rules */
+	--extra-extra-large: 72px;
+	--extra-large: 56px;
+	--large: 48px;
+	--moderate: 40px;
+	--medium: 32px;
+	--small: 24px;
+	--tiny: 16px;
+
+	/*-Color Rules  */
+	--black: #181616;
+	--white: #fafafa;
+}
+
+
+
+/* Desktop Presets */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+    background-color: red;
+}
+.container{
+	width: 75%;
+	align-items: center;
+	margin: 0 auto;	
+}
+
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lora', serif; 
+}
+
+p{ 
+    font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*  Hero Styles */
+
+.hero{
+    background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
+    width: 100%;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right 32%;
+}
+
+.logo{
+    padding: 1% 0 2% 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #17221E;
+    width: 30%;
+    font-size: var(--medium);
+    font-weight: 200;
+}
+
+.hero p{
+    padding-top: 20px;
+    font-size: var(--small);
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: center;
+    color: #0D1B2A;
+}
+
+.arrow-link{
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20%;
+    filter: contrast(160%);
+
+}
