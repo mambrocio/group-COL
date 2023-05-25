@@ -96,6 +96,61 @@ h1{
 .arrow{
     transform: rotate(90deg);
 }
+
 a{
     text-decoration: none;
 }
+
+/* Section 1 */
+
+.form-section{
+    display: flex;
+    padding-top: 7%;
+    padding-bottom: 5.3%;
+}
+
+.instructions{
+    height: 50%;
+    width: 24%;
+    padding-right: 50px;
+    font-size: var(--small);
+}
+
+form{
+    width: 40%;
+}
+
+#formAnchor{
+    padding-top: 2%;
+}
+
+
+/* Form Block*/
+
+
+input, select{
+    float: right;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+}
+
+::placeholder{
+    font-size: var(--tiny);
+}
+
+form p{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.q-a{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+
+.question{
+    width: 44%;
+}
+
+
