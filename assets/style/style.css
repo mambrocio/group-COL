@@ -41,6 +41,30 @@ html{
 	margin: 0 auto;	
 }
 
+.container h1{
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+
+.container p{
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+    from {
+      transform: translateY(100%);
+      opacity: 0%;
+    }
+  
+    to {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+
 .clearfix:after{
 	content: "";
 	display: table;
