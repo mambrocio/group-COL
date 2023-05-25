@@ -1,392 +1,464 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Budget Buddy: Cost Of Living Finder</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/coins.png">
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    /> -->
     <link rel="stylesheet" href="assets/style/style.css" />
-  </head>
-  <body>
-    <section class="hero clearfix">
-      <div class="container">
+</head>
+<body>
+
+<section class="hero clearfix">
+    <div class="container">
         <img class="logo" src="./assets/images/logo.png" />
         <h1>Your Convenient Cost Of Living Finder</h1>
         <p class="hero-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
         </p>
         <p class="arrow">
-          <a href="#">➤</a>
+        <a href="#formAnchor">➤</a>
         </p>
-      </div>
+    </div>
     </section>
 
-    <section class=""></section>
-    <container class="d-flex justify-content-center">
-      <form
+
+
+
+<section class="form-section container justify-content-center">
+    <div class="instructions">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
+    <form
         name="options"
         id="options"
         class="standard_margin estimator_form text-center"
-        method="get"
-      >
-        <p>
-          What City Would You Like To Live In?
-          <input
+        method="get">
+        <div id="formAnchor">&nbsp;</div>
+        <div class="q-a">
+        <div class="question">        
+            <p>
+            What City Would You Like To Live In?
+            </p>
+        </div>
+        <div class="answer">
+            <input
             type="text"
             name="Search-bar"
             id="search-bar"
-            placeholder="input city"
+            placeholder="Enter City"
             value=""
-          />
-        </p>
-        <p>
-          Currency:
-          <select id="displayCurrency" name="displayCurrency">
-            <option value="EUR">EUR</option>
-            <option value="USD" selected="selected">USD</option>
-            <option value="---">---</option>
-            <option value="AED">AED</option>
-            <option value="AFN">AFN</option>
-            <option value="ALL">ALL</option>
-            <option value="AMD">AMD</option>
-            <option value="ANG">ANG</option>
-            <option value="AOA">AOA</option>
-            <option value="AUD">AUD</option>
-            <option value="AWG">AWG</option>
-            <option value="AZN">AZN</option>
-            <option value="BAM">BAM</option>
-            <option value="BBD">BBD</option>
-            <option value="BDT">BDT</option>
-            <option value="BGN">BGN</option>
-            <option value="BHD">BHD</option>
-            <option value="BIF">BIF</option>
-            <option value="BMD">BMD</option>
-            <option value="BND">BND</option>
-            <option value="BOB">BOB</option>
-            <option value="BRL">BRL</option>
-            <option value="BSD">BSD</option>
-            <option value="BTN">BTN</option>
-            <option value="BWP">BWP</option>
-            <option value="BYN">BYN</option>
-            <option value="BZD">BZD</option>
-            <option value="CAD">CAD</option>
-            <option value="CDF">CDF</option>
-            <option value="CHF">CHF</option>
-            <option value="CLF">CLF</option>
-            <option value="CLP">CLP</option>
-            <option value="CNH">CNH</option>
-            <option value="CNY">CNY</option>
-            <option value="COP">COP</option>
-            <option value="CRC">CRC</option>
-            <option value="CUC">CUC</option>
-            <option value="CVE">CVE</option>
-            <option value="CZK">CZK</option>
-            <option value="DJF">DJF</option>
-            <option value="DKK">DKK</option>
-            <option value="DOP">DOP</option>
-            <option value="DZD">DZD</option>
-            <option value="EGP">EGP</option>
-            <option value="ERN">ERN</option>
-            <option value="EUR">EUR</option>
-            <option value="FJD">FJD</option>
-            <option value="FKP">FKP</option>
-            <option value="GBP">GBP</option>
-            <option value="GEL">GEL</option>
-            <option value="GGP">GGP</option>
-            <option value="GHS">GHS</option>
-            <option value="GIP">GIP</option>
-            <option value="GMD">GMD</option>
-            <option value="GNF">GNF</option>
-            <option value="GTQ">GTQ</option>
-            <option value="GYD">GYD</option>
-            <option value="HKD">HKD</option>
-            <option value="HNL">HNL</option>
-            <option value="HRK">HRK</option>
-            <option value="HTG">HTG</option>
-            <option value="HUF">HUF</option>
-            <option value="IDR">IDR</option>
-            <option value="ILS">ILS</option>
-            <option value="IMP">IMP</option>
-            <option value="INR">INR</option>
-            <option value="IQD">IQD</option>
-            <option value="IRR">IRR</option>
-            <option value="ISK">ISK</option>
-            <option value="JEP">JEP</option>
-            <option value="JMD">JMD</option>
-            <option value="JOD">JOD</option>
-            <option value="JPY">JPY</option>
-            <option value="KES">KES</option>
-            <option value="KGS">KGS</option>
-            <option value="KHR">KHR</option>
-            <option value="KMF">KMF</option>
-            <option value="KPW">KPW</option>
-            <option value="KRW">KRW</option>
-            <option value="KWD">KWD</option>
-            <option value="KYD">KYD</option>
-            <option value="KZT">KZT</option>
-            <option value="LAK">LAK</option>
-            <option value="LKR">LKR</option>
-            <option value="LRD">LRD</option>
-            <option value="LSL">LSL</option>
-            <option value="LYD">LYD</option>
-            <option value="MAD">MAD</option>
-            <option value="MDL">MDL</option>
-            <option value="MGA">MGA</option>
-            <option value="MKD">MKD</option>
-            <option value="MNT">MNT</option>
-            <option value="MOP">MOP</option>
-            <option value="MRU">MRU</option>
-            <option value="MUR">MUR</option>
-            <option value="MVR">MVR</option>
-            <option value="MWK">MWK</option>
-            <option value="MXN">MXN</option>
-            <option value="MYR">MYR</option>
-            <option value="MZN">MZN</option>
-            <option value="NAD">NAD</option>
-            <option value="NGN">NGN</option>
-            <option value="NIO">NIO</option>
-            <option value="NOK">NOK</option>
-            <option value="NPR">NPR</option>
-            <option value="NZD">NZD</option>
-            <option value="OMR">OMR</option>
-            <option value="PAB">PAB</option>
-            <option value="PEN">PEN</option>
-            <option value="PGK">PGK</option>
-            <option value="PHP">PHP</option>
-            <option value="PKR">PKR</option>
-            <option value="PLN">PLN</option>
-            <option value="PYG">PYG</option>
-            <option value="QAR">QAR</option>
-            <option value="RON">RON</option>
-            <option value="RSD">RSD</option>
-            <option value="RUB">RUB</option>
-            <option value="RWF">RWF</option>
-            <option value="SAR">SAR</option>
-            <option value="SBD">SBD</option>
-            <option value="SCR">SCR</option>
-            <option value="SDG">SDG</option>
-            <option value="SEK">SEK</option>
-            <option value="SGD">SGD</option>
-            <option value="SHP">SHP</option>
-            <option value="SLL">SLL</option>
-            <option value="SOS">SOS</option>
-            <option value="SRD">SRD</option>
-            <option value="STD">STD</option>
-            <option value="STN">STN</option>
-            <option value="SVC">SVC</option>
-            <option value="SYP">SYP</option>
-            <option value="SZL">SZL</option>
-            <option value="THB">THB</option>
-            <option value="TJS">TJS</option>
-            <option value="TMT">TMT</option>
-            <option value="TND">TND</option>
-            <option value="TOP">TOP</option>
-            <option value="TRY">TRY</option>
-            <option value="TTD">TTD</option>
-            <option value="TWD">TWD</option>
-            <option value="TZS">TZS</option>
-            <option value="UAH">UAH</option>
-            <option value="UGX">UGX</option>
-            <option value="USD">USD</option>
-            <option value="UYU">UYU</option>
-            <option value="UZS">UZS</option>
-            <option value="VES">VES</option>
-            <option value="VND">VND</option>
-            <option value="VUV">VUV</option>
-            <option value="WST">WST</option>
-            <option value="XAF">XAF</option>
-            <option value="XAG">XAG</option>
-            <option value="XCD">XCD</option>
-            <option value="XDR">XDR</option>
-            <option value="XOF">XOF</option>
-            <option value="XPF">XPF</option>
-            <option value="YER">YER</option>
-            <option value="ZAR">ZAR</option>
-            <option value="ZMW">ZMW</option>
-            <option value="ZWL">ZWL</option>
-          </select>
-        </p>
-
-        <p>
-          What Is Your Yearly Income:
-          <input
-            type="text"
-            name="income"
-            id="yearly_income"
-            placeholder="45,000"
-            value=""
-          />
-        </p>
-
-        <p>
-          How Many Members of your household:
-          <input type="text" name="members" id="members" value="1" />
-        </p>
-
-        <p>
-          What Percentage of Your Meals Are Eaten At Fast Food restaurants:
-          <select
-            id="inexpensive_restaurants_percentage"
-            name="inexpensive_restaurants_percentage"
-            onchange="getValues()"
-          >
-            <option value="0.0">0.0%</option>
-            <option value="10.0">10.0%</option>
-            <option value="20.0">20.0%</option>
-            <option value="30.0">30.0%</option>
-            <option value="40.0">40.0%</option>
-            <option value="50.0" selected="selected">50.0%</option>
-            <option value="60.0">60.0%</option>
-            <option value="70.0">70.0%</option>
-            <option value="80.0">80.0%</option>
-            <option value="90.0">90.0%</option>
-            <option value="100.0">100.0%</option>
-          </select>
-        </p>
-
-        <p>
-          What Percentage of Your Meals Are Eaten At Fine Dining restaurants:
-          <select id="restaurants_percentage" onchange="getValues()">
-            <option value="0.0">0.0%</option>
-            <option value="5.0">5.0%</option>
-            <option value="10.0" selected="selected">10.0%</option>
-            <option value="15.0">15.0%</option>
-            <option value="20.0">20.0%</option>
-            <option value="25.0">25.0%</option>
-            <option value="30.0">30.0%</option>
-            <option value="35.0">35.0%</option>
-            <option value="40.0">40.0%</option>
-            <option value="45.0">45.0%</option>
-            <option value="50.0">50.0%</option>
-            <option value="55.0">55.0%</option>
-            <option value="60.0">60.0%</option>
-            <option value="65.0">65.0%</option>
-            <option value="70.0">70.0%</option>
-            <option value="75.0">75.0%</option>
-            <option value="80.0">80.0%</option>
-            <option value="85.0">85.0%</option>
-            <option value="90.0">90.0%</option>
-            <option value="95.0">95.0%</option>
-            <option value="100.0">100.0%</option>
-          </select>
-          of the time
-        </p>
-
-        <p>
-          How Often Are You Going Out And Indulging In Night Life:
-          <select id="going_out_monthly" onchange="getValues()">
-            <option value="100.0">A lot</option>
-            <option value="25.0" selected="selected">Moderate</option>
-            <option value="10.0">Low</option>
-            <option value="0.0">No</option>
-          </select>
-        </p>
-
-        <p>
-          How Often Are You Conuming Alcoholic beverages At Home:
-          <select id="alcoholic_drinks" onchange="getValues()">
-            <option value="100.0">A lot</option>
-            <option value="25.0" selected="selected">Moderate</option>
-            <option value="10.0">Low</option>
-            <option value="0.0">No</option>
-          </select>
-        </p>
-
-        <p>
-          How Often Are You Driving a car:
-          <select id="driving_car" onchange="getValues()">
-            <option value="100.0">A lot</option>
-            <option value="40.0" selected="selected">Moderate</option>
-            <option value="20.0">Low</option>
-            <option value="0.0">No</option>
-          </select>
-        </p>
-
-        <p>
-          How Many Gym/Sports Memberships Do You Use:
-
-          <select id="gym_memberships" onchange="getValues()">
-            <option value="100.0">1 Gym/Sports Membership</option>
-            <option value="200.0">2 Gym/Sports Membership</option>
-            <option value="0.0" selected="selected">No</option>
-          </select>
-        </p>
-
-        <p>
-          How often Are You going on Vacation and Traveling:
-
-          <select id="vacation" onchange="getValues()">
-            <option value="150.0">
-              Three per year (one week each), relatively expensive
-            </option>
-            <option value="100.0">
-              Two per year (one week each), relatively expensive
-            </option>
-            <option value="51.0">
-              Once per year (one week each), relatively expensive
-            </option>
-            <option value="49.0">
-              Twice per year (one week each), relatively inexpensive
-            </option>
-            <option value="25.0">
-              Once per year (one week each), relatively inexpensive
-            </option>
-            <option value="0.0" selected="selected">None</option>
-          </select>
-        </p>
-
-        <p>
-          How would you rate your frequency of buying clothing and shoes :
-
-          <select id="clothing_and_shoes" onchange="getValues()">
-            <option value="100.0">High</option>
-            <option value="50.0">Moderate</option>
-            <option value="25.0" selected="selected">Low</option>
-          </select>
-        </p>
-
-        <p>
-          Would You Like to Include Rent:
-
-          <select id="rent">
-            <option value="true">yes</option>
-            <option value="false" selected="selected">no</option>
-          </select>
-        </p>
-
-        <p>
-          Number of your children:
-          <input
-            type="text"
-            name="child_count"
-            id="child_count"
-            value="0"
-            onchange="getValues()"
-            size="2"
-          />
-        </p>
-        <p>
-          <input
+        />
+        </div>
+        </div>
+        <div class="q-a">
+        <div class="question">        
+            <p>
+                Select Currency
+            </p>
+        </div>
+        <div class="answer">
+            <select id="displayCurrency" name="displayCurrency">
+                <option value="EUR">EUR</option>
+                <option value="USD" selected="selected">USD</option>
+                <option value="---">---</option>
+                <option value="AED">AED</option>
+                <option value="AFN">AFN</option>
+                <option value="ALL">ALL</option>
+                <option value="AMD">AMD</option>
+                <option value="ANG">ANG</option>
+                <option value="AOA">AOA</option>
+                <option value="AUD">AUD</option>
+                <option value="AWG">AWG</option>
+                <option value="AZN">AZN</option>
+                <option value="BAM">BAM</option>
+                <option value="BBD">BBD</option>
+                <option value="BDT">BDT</option>
+                <option value="BGN">BGN</option>
+                <option value="BHD">BHD</option>
+                <option value="BIF">BIF</option>
+                <option value="BMD">BMD</option>
+                <option value="BND">BND</option>
+                <option value="BOB">BOB</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="BTN">BTN</option>
+                <option value="BWP">BWP</option>
+                <option value="BYN">BYN</option>
+                <option value="BZD">BZD</option>
+                <option value="CAD">CAD</option>
+                <option value="CDF">CDF</option>
+                <option value="CHF">CHF</option>
+                <option value="CLF">CLF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNH">CNH</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CRC">CRC</option>
+                <option value="CUC">CUC</option>
+                <option value="CVE">CVE</option>
+                <option value="CZK">CZK</option>
+                <option value="DJF">DJF</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="DZD">DZD</option>
+                <option value="EGP">EGP</option>
+                <option value="ERN">ERN</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="FKP">FKP</option>
+                <option value="GBP">GBP</option>
+                <option value="GEL">GEL</option>
+                <option value="GGP">GGP</option>
+                <option value="GHS">GHS</option>
+                <option value="GIP">GIP</option>
+                <option value="GMD">GMD</option>
+                <option value="GNF">GNF</option>
+                <option value="GTQ">GTQ</option>
+                <option value="GYD">GYD</option>
+                <option value="HKD">HKD</option>
+                <option value="HNL">HNL</option>
+                <option value="HRK">HRK</option>
+                <option value="HTG">HTG</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="IMP">IMP</option>
+                <option value="INR">INR</option>
+                <option value="IQD">IQD</option>
+                <option value="IRR">IRR</option>
+                <option value="ISK">ISK</option>
+                <option value="JEP">JEP</option>
+                <option value="JMD">JMD</option>
+                <option value="JOD">JOD</option>
+                <option value="JPY">JPY</option>
+                <option value="KES">KES</option>
+                <option value="KGS">KGS</option>
+                <option value="KHR">KHR</option>
+                <option value="KMF">KMF</option>
+                <option value="KPW">KPW</option>
+                <option value="KRW">KRW</option>
+                <option value="KWD">KWD</option>
+                <option value="KYD">KYD</option>
+                <option value="KZT">KZT</option>
+                <option value="LAK">LAK</option>
+                <option value="LKR">LKR</option>
+                <option value="LRD">LRD</option>
+                <option value="LSL">LSL</option>
+                <option value="LYD">LYD</option>
+                <option value="MAD">MAD</option>
+                <option value="MDL">MDL</option>
+                <option value="MGA">MGA</option>
+                <option value="MKD">MKD</option>
+                <option value="MNT">MNT</option>
+                <option value="MOP">MOP</option>
+                <option value="MRU">MRU</option>
+                <option value="MUR">MUR</option>
+                <option value="MVR">MVR</option>
+                <option value="MWK">MWK</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="MZN">MZN</option>
+                <option value="NAD">NAD</option>
+                <option value="NGN">NGN</option>
+                <option value="NIO">NIO</option>
+                <option value="NOK">NOK</option>
+                <option value="NPR">NPR</option>
+                <option value="NZD">NZD</option>
+                <option value="OMR">OMR</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PGK">PGK</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="QAR">QAR</option>
+                <option value="RON">RON</option>
+                <option value="RSD">RSD</option>
+                <option value="RUB">RUB</option>
+                <option value="RWF">RWF</option>
+                <option value="SAR">SAR</option>
+                <option value="SBD">SBD</option>
+                <option value="SCR">SCR</option>
+                <option value="SDG">SDG</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="SHP">SHP</option>
+                <option value="SLL">SLL</option>
+                <option value="SOS">SOS</option>
+                <option value="SRD">SRD</option>
+                <option value="STD">STD</option>
+                <option value="STN">STN</option>
+                <option value="SVC">SVC</option>
+                <option value="SYP">SYP</option>
+                <option value="SZL">SZL</option>
+                <option value="THB">THB</option>
+                <option value="TJS">TJS</option>
+                <option value="TMT">TMT</option>
+                <option value="TND">TND</option>
+                <option value="TOP">TOP</option>
+                <option value="TRY">TRY</option>
+                <option value="TTD">TTD</option>
+                <option value="TWD">TWD</option>
+                <option value="TZS">TZS</option>
+                <option value="UAH">UAH</option>
+                <option value="UGX">UGX</option>
+                <option value="USD">USD</option>
+                <option value="UYU">UYU</option>
+                <option value="UZS">UZS</option>
+                <option value="VES">VES</option>
+                <option value="VND">VND</option>
+                <option value="VUV">VUV</option>
+                <option value="WST">WST</option>
+                <option value="XAF">XAF</option>
+                <option value="XAG">XAG</option>
+                <option value="XCD">XCD</option>
+                <option value="XDR">XDR</option>
+                <option value="XOF">XOF</option>
+                <option value="XPF">XPF</option>
+                <option value="YER">YER</option>
+                <option value="ZAR">ZAR</option>
+                <option value="ZMW">ZMW</option>
+                <option value="ZWL">ZWL</option>
+                </select>
+            </div>
+        </div>
+        <div class="q-a">
+            <div class="question">        
+                <p>
+                What Is Your Yearly Income:
+                </p>
+            </div>
+        <div class="answer">
+                <input
+                type="text"
+                name="income"
+                id="yearly_income"
+                placeholder="45,000"
+                value=""
+        />
+        </div>
+        </div>
+        <div class="q-a">
+            <div class="question">        
+                <p>
+                How Many Members of your household:
+                </p>
+            </div>
+            <div class="answer">
+                <input type="text" 
+                name="members" 
+                id="members" 20
+                value="1" />
+            </div>
+            </div>
+        <div class="q-a">
+            <div class="question">        
+                <p>
+                What Estimated Percentage Of Your Meals Are Eaten At Fast Food Restaurants:
+                </p>
+            </div>
+            <div class="answer">
+                <select
+                id="inexpensive_restaurants_percentage"
+                name="inexpensive_restaurants_percentage"
+                onchange="getValues()">
+                <option value="0.0">0.0%</option>
+                <option value="10.0">10.0%</option>
+                <option value="20.0">20.0%</option>
+                <option value="30.0">30.0%</option>
+                <option value="40.0">40.0%</option>
+                <option value="50.0" selected="selected">50.0%</option>
+                <option value="60.0">60.0%</option>
+                <option value="70.0">70.0%</option>
+                <option value="80.0">80.0%</option>
+                <option value="90.0">90.0%</option>
+                <option value="100.0">100.0%</option>
+                </select>
+            </div>
+            </div>
+        <div class="q-a">
+            <div class="question">        
+                <p>
+                How Often Are You Going Out And Indulging In Night Life:
+                </p>
+            </div>
+            <div class="answer">
+                <select id="going_out_monthly" onchange="getValues()">
+                <option value="100.0">A lot</option>
+                <option value="25.0" selected="selected">Moderate</option>
+                <option value="10.0">Low</option>
+                <option value="0.0">No</option>
+                </select>
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">   
+                <p>
+                How Often Are You Consuming Alcoholic Beverages At Home:
+                </p>
+                </div>
+                <div class="answer">
+                <select id="alcoholic_drinks" onchange="getValues()">
+                <option value="100.0">A lot</option>
+                <option value="25.0" selected="selected">Moderate</option>
+                <option value="10.0">Low</option>
+                <option value="0.0">No</option>
+                </select>
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                How Often Are You Driving a car:
+                </p>    
+            </div>
+            <div class="answer">
+                <select id="driving_car" onchange="getValues()">
+                <option value="100.0">A lot</option>
+                <option value="40.0" selected="selected">Moderate</option>
+                <option value="20.0">Low</option>
+                <option value="0.0">No</option>
+                </select>    
+            </div>
+            </div>
+            <div class="q-a">
+                <div class="question">        
+                <p>
+                How Many Gym/Sports Memberships Do You Use:
+                </p>     
+                </div>
+                <div class="answer">
+                <select id="gym_memberships" onchange="getValues()">
+                <option value="100.0">1 Gym/Sports Membership</option>
+                <option value="200.0">2 Gym/Sports Membership</option>
+                <option value="0.0" selected="selected">No</option>
+                </select>
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                How often Are You going on Vacation and Traveling:
+                </p>            
+            </div>
+            <div class="answer">
+                <select id="vacation" onchange="getValues()">
+                <option value="150.0">
+                Three per year (one week each), relatively expensive
+                </option>
+                <option value="100.0">
+                Two per year (one week each), relatively expensive
+                </option>
+                <option value="51.0">
+                Once per year (one week each), relatively expensive
+                </option>
+                <option value="49.0">
+                Twice per year (one week each), relatively inexpensive
+                </option>
+                <option value="25.0">
+                Once per year (one week each), relatively inexpensive
+                </option>
+                <option value="0.0" selected="selected">None</option>
+                </select>
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                How would you rate your frequency of buying clothing and shoes :
+                </p>
+            </div>
+            <div class="answer">
+                <select id="clothing_and_shoes" onchange="getValues()">
+                <option value="100.0">High</option>
+                <option value="50.0">Moderate</option>
+                <option value="25.0" selected="selected">Low</option>
+                </select>
+            </div>
+    
+            </div>
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                Would You Like to Include Rent:
+                </p>
+            </div>
+            <div class="answer">
+                <select id="rent">
+                <option value="true">Yes</option>
+                <option value="false" selected="selected">No</option>
+                </select>
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                Would You Like to Include Rent:
+                </p>
+            </div>
+            <div class="answer">
+                <select id="rent">
+                <option value="true">Yes</option>
+                <option value="false" selected="selected">No</option>
+                </select>
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                Number Of Children:
+                </p>
+                </div>
+                <div class="answer">
+                <input
+                type="text"
+                name="child_count"
+                id="child_count"
+                value="0"
+                onchange="getValues()"
+                size="2"
+                />
+            </div>
+            </div>
+            <div class="q-a">
+            <div class="question">    
+            &nbsp;
+            </div>
+            <div class="answer">
+            <input
             type="submit"
             name="Recalculated"
             value="Submit"
             class="bigger_button"
-          />
-        </p>
-      </form>
-    </container>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="scripts/script.js" async></script>
-  </body>
+            />
+            </div>
+            </div>
+</form>
+    <section class="result" id class="resultTab">
+        <div id="stateName">
+            <strong>Example State</strong>
+        </div>
+        <div id="state">
+            <img src="assets/images/state_ex.PNG">  
+        </div>
+    </section>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="scripts/script.js" async></script>
+</body>
 </html>
