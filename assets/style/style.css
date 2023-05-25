@@ -31,12 +31,17 @@
 	box-sizing: border-box;
 }
 
+body{
+    font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-  serif;
+}
+
+
 html{
 	scroll-behavior: smooth;
 }
 
 .container{
-	width: 75%;
+	width: 85%;
 	align-items: center;
 	margin: 0 auto;	
 }
@@ -74,9 +79,8 @@ html{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Lora', serif; 
 }
-
-p{ 
-    font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+p{
+    color: #201E50;
 }
 
 /*  Hero Styles */
@@ -88,6 +92,7 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right 32%;
+    border-radius: 0% 0% 2% 2%;
 }
 
 .logo{
@@ -120,6 +125,69 @@ h1{
 .arrow{
     transform: rotate(90deg);
 }
+
 a{
     text-decoration: none;
 }
+
+/* Section 1 */
+
+.form-section{
+    display: flex;
+    padding-top: 7%;
+    padding-bottom: 5.3%;
+}
+
+.instructions{
+    height: 50%;
+    width: 24%;
+    padding-right: 50px;
+    font-size: var(--small);
+}
+
+form{
+    width: 40%;
+}
+
+#formAnchor{
+    padding-top: 2%;
+}
+
+
+/* Form Block*/
+
+
+input, select{
+    float: right;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+}
+
+::placeholder{
+    font-size: var(--tiny);
+}
+
+form p{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.q-a{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+
+.question{
+    width: 44%;
+}
+
+.result{
+    padding-left: 50px;
+}
+
+strong{
+    font-size: var(--medium);
+}
+
+
