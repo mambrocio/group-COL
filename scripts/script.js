@@ -1,6 +1,10 @@
 const apiKey = "7lki27i8glz6d0";
+var geoapiKey = "93ebb8e57f9a4d07d7c8ebff4bd9146f";
 var searchBtn = $(".btn");
 var form = document.getElementById("options");
+var inputName;
+var inputLat;
+var inputLon;
 
 // // pull the search input from index page and give it a variable in our Java Script
 // var urlParams = new URLSearchParams(window.location.search);
@@ -81,63 +85,89 @@ form.addEventListener("submit", function (event) {
   console.log("gym membership: ", gymMembership + "$");
   console.log("vacation cost: " + vacation + "$");
 
-  // Perform any additional processing or calculations here
   fetch(
-    `https://www.numbeo.com/api/city_cost_estimator?api_key=${apiKey}&query=${searchInput}&houesehold_members=${members}&children=${childCount}&include_rent=${rent}&currency=${currency}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=5&appid=${geoapiKey}`
   )
     .then((response) => response.json())
     .then((data) => {
-      let singleCostOfLiving = data.overall_estimate / 4;
-      let trueCostOfLiving = singleCostOfLiving * members;
-      let totalCost =
-        trueCostOfLiving +
-        inexpensiveRestaurantsPercentage +
-        goingOutMonthly +
-        gymMembership +
-        clothesAndShoes;
+      inputName = data[0].name;
+      console.log(inputName);
+      inputLat = data[0].lat;
+      inputLon = data[0].lon;
+      // fetching all relevant data from api usihg the lon and lat from geocode api
 
-      var generalCost = document.getElementById("city-cost");
-      generalCost.innerHTML =
-        "The Cost of Living In Your City is:" +
-        trueCostOfLiving.toFixed(0) +
-        "$";
+      // map java script
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoiam9zaHVhdmFuZXBzIiwiYSI6ImNsaTQ0N3FvZzE0emEzZW8wbmMwdmNwbHYifQ.hha62sCgSu3bcZlJbj89gg";
+      const map = new mapboxgl.Map({
+        container: "map", // container ID
+        style: "mapbox://styles/mapbox/navigation-day-v1", // style URL
+        center: [inputLon, inputLat], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+      });
+      console.log(map);
+      // adding location to the map title
 
-      if (income > totalCost) {
-        let excessFunds = income - totalCost;
-        let safeSavings = excessFunds / 2;
-        var personalCost = document.getElementById("personal-cost");
-        personalCost.innerHTML =
-          "your customized cost of living:  " + totalCost.toFixed(0) + "$";
+      $(".map-title").children("strong").html("");
 
-        var personalSaving = document.getElementById("personal-saving");
-        personalSaving.innerHTML =
-          "budget buddy recommends you to save:  " +
-          safeSavings.toFixed(0) +
-          "$";
+      $(".map-title")
+        .children("strong")
+        .append("Current Location: " + inputName);
 
-        console.log("your general cost of living: " + trueCostOfLiving + "$");
-        console.log("your customized cost of living: " + totalCost + "$");
-        console.log("your monthly income: " + income + "$");
-        console.log(
-          "budget buddy recommends you to save:  " + safeSavings + "$"
-        );
-      } else {
-        var personalCost = document.getElementById("personal-cost");
-        personalCost.innerHTML =
-          "your customized cost of living:  " + totalCost + "$";
+      // Perform any additional processing or calculations here
+      fetch(
+        `https://www.numbeo.com/api/city_cost_estimator?api_key=${apiKey}&query=${searchInput}&houesehold_members=${members}&children=${childCount}&include_rent=${rent}&currency=${currency}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          let singleCostOfLiving = data.overall_estimate / 4;
+          let trueCostOfLiving = singleCostOfLiving * members;
+          let totalCost =
+            trueCostOfLiving +
+            inexpensiveRestaurantsPercentage +
+            goingOutMonthly +
+            gymMembership +
+            clothesAndShoes;
 
-        var personalSaving = document.getElementById("personal-saving");
-        personalSaving.innerHTML =
-          "budget buddy recommends you should look for  more affordable place to move within your budget";
-        console.log(
-          "budget buddy recommends you should look for  more affordable place to move within your budget"
-        );
-        console.log("your monthly income is : " + income);
-        console.log("your monthly cost is : " + totalCost);
-      }
+          let badBudget = totalCost - income;
+
+          var generalCost = document.getElementById("city-cost");
+          generalCost.innerHTML = trueCostOfLiving.toFixed(0) + "$";
+
+          if (income > totalCost) {
+            let excessFunds = income - totalCost;
+            let safeSavings = excessFunds / 2;
+            var personalCost = document.getElementById("personal-cost");
+            personalCost.innerHTML = totalCost.toFixed(0) + "$";
+
+            var personalSaving = document.getElementById("personal-saving");
+            personalSaving.innerHTML = safeSavings.toFixed(0) + "$";
+
+            console.log(
+              "your general cost of living: " + trueCostOfLiving + "$"
+            );
+            console.log("your customized cost of living: " + totalCost + "$");
+            console.log("your monthly income: " + income + "$");
+            console.log(
+              "budget buddy recommends you to save:  " + safeSavings + "$"
+            );
+          } else {
+            var personalCost = document.getElementById("personal-cost");
+            personalCost.innerHTML =
+              badBudget.toFixed(0) + "$ Over Your Monthly Income";
+
+            var personalSaving = document.getElementById("personal-saving");
+            personalSaving.innerHTML =
+              "budget buddy recommends you should look for  more affordable place to move within your budget";
+            console.log(
+              "budget buddy recommends you should look for  more affordable place to move within your budget"
+            );
+            console.log("your monthly income is : " + income);
+            console.log("your monthly cost is : " + totalCost);
+          }
+        });
     });
 });
-
 //observers to load elements on the bottom of the page when scrolled to
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
