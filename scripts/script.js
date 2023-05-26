@@ -98,29 +98,33 @@ form.addEventListener("submit", function (event) {
 
       var generalCost = document.getElementById("city-cost");
       generalCost.innerHTML =
-        "The Cost of Living In Your City is:" + totalCost.toFixed(0) + "$";
+        "The Cost of Living In Your City is:" +
+        trueCostOfLiving.toFixed(0) +
+        "$";
 
       if (income > totalCost) {
         let excessFunds = income - totalCost;
         let safeSavings = excessFunds / 2;
         var personalCost = document.getElementById("personal-cost");
         personalCost.innerHTML =
-          "your customized cost of living: " + totalCost + "$";
+          "your customized cost of living:  " + totalCost.toFixed(0) + "$";
 
         var personalSaving = document.getElementById("personal-saving");
         personalSaving.innerHTML =
-          "budget buddy recommends you to save: " + safeSavings + "$";
+          "budget buddy recommends you to save:  " +
+          safeSavings.toFixed(0) +
+          "$";
 
         console.log("your general cost of living: " + trueCostOfLiving + "$");
         console.log("your customized cost of living: " + totalCost + "$");
         console.log("your monthly income: " + income + "$");
         console.log(
-          "budget buddy recommends you to save: " + safeSavings + "$"
+          "budget buddy recommends you to save:  " + safeSavings + "$"
         );
       } else {
         var personalCost = document.getElementById("personal-cost");
         personalCost.innerHTML =
-          "your customized cost of living: " + totalCost + "$";
+          "your customized cost of living:  " + totalCost + "$";
 
         var personalSaving = document.getElementById("personal-saving");
         personalSaving.innerHTML =
@@ -135,13 +139,13 @@ form.addEventListener("submit", function (event) {
 });
 
 //observers to load elements on the bottom of the page when scrolled to
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('instructions-animation');
+      entry.target.classList.add("instructions-animation");
     }
   });
 });
 
-observer.observe(document.querySelector('.instructions'));
-observer.observe(document.querySelector('form'));
+observer.observe(document.querySelector(".instructions"));
+observer.observe(document.querySelector("form"));

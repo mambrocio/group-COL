@@ -42,61 +42,61 @@ html {
   margin: 0 auto;
 }
 
-.container h1{
-    opacity: 0%;
-    animation-duration: 1s;
-    animation-name: slideInUp;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+.container h1 {
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 .hero-desc {
-    opacity: 0%;
-    animation-duration: 1s;
-    animation-name: slideInUp;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-delay: .25s;
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.25s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .instructions-animation {
-        animation-duration: 1s;
-        animation-name: slideInRight;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-delay: 0s;
-    }
+  .instructions-animation {
+    animation-duration: 1s;
+    animation-name: slideInRight;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
 }
 
 @keyframes slideInUp {
-    from {
-      transform: translateY(100%);
-      opacity: 0%;
-    }
-  
-    to {
-      transform: translateY(0%);
-      opacity: 100%;
-    }
+  from {
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
 }
 
 @keyframes slideInRight {
-    from {
-      transform: translateX(-100%);
-      opacity: 0%;
-    }
-  
-    to {
-      transform: translateX(0%);
-      opacity: 100%;
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
 }
 
-.clearfix:after{
-	content: "";
-	display: table;
-	clear: both;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 h1,
@@ -178,17 +178,17 @@ a {
   padding-bottom: 5.3%;
 }
 
-.instructions{
-    height: 50%;
-    width: 24%;
-    padding-right: 50px;
-    font-size: var(--small);
-    opacity: 0%;
+.instructions {
+  height: 50%;
+  width: 24%;
+  padding-right: 50px;
+  font-size: var(--small);
+  opacity: 0%;
 }
 
-form{
-    width: 40%;
-    opacity: 0%;
+form {
+  width: 40%;
+  opacity: 0%;
 }
 
 #formAnchor {
@@ -228,4 +228,14 @@ form p {
 
 strong {
   font-size: var(--medium);
+}
+
+/* results */
+
+#city-cost,
+#personal-cost,
+#personal-saving {
+  width: 20vw;
+  margin-top: 16px;
+  margin-bottom: 28px;
 }
