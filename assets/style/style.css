@@ -47,18 +47,33 @@ html{
 }
 
 .container h1{
+    opacity: 0%;
     animation-duration: 1s;
-    animation-name: slidein;
+    animation-name: slideInUp;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 
-.container p{
+.hero-desc {
+    opacity: 0%;
     animation-duration: 1s;
-    animation-name: slidein;
+    animation-name: slideInUp;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1;
+    animation-delay: .25s;
 }
 
-@keyframes slidein {
+@media (prefers-reduced-motion: no-preference) {
+    .instructions-animation {
+        animation-duration: 1s;
+        animation-name: slideInRight;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+    }
+}
+
+@keyframes slideInUp {
     from {
       transform: translateY(100%);
       opacity: 0%;
@@ -68,7 +83,19 @@ html{
       transform: translateY(0%);
       opacity: 100%;
     }
-  }
+}
+
+@keyframes slideInRight {
+    from {
+      transform: translateX(-100%);
+      opacity: 0%;
+    }
+  
+    to {
+      transform: translateX(0%);
+      opacity: 100%;
+    }
+}
 
 .clearfix:after{
 	content: "";
@@ -143,10 +170,12 @@ a{
     width: 24%;
     padding-right: 50px;
     font-size: var(--small);
+    opacity: 0%;
 }
 
 form{
     width: 40%;
+    opacity: 0%;
 }
 
 #formAnchor{
