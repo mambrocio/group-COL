@@ -133,3 +133,15 @@ form.addEventListener("submit", function (event) {
       }
     });
 });
+
+//observers to load elements on the bottom of the page when scrolled to
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('instructions-animation');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.instructions'));
+observer.observe(document.querySelector('form'));
