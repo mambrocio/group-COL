@@ -33,6 +33,7 @@
 
 body{
     font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-  serif;
+
 }
 
 
@@ -55,9 +56,6 @@ html{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Lora', serif; 
 }
-p{
-    color: #201E50;
-}
 
 /*  Hero Styles */
 
@@ -69,6 +67,9 @@ p{
     background-repeat: no-repeat;
     background-position: right 32%;
     border-radius: 0% 0% 2% 2%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .logo{
@@ -119,51 +120,75 @@ a{
     width: 24%;
     padding-right: 50px;
     font-size: var(--small);
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #3CD3AD
+    
 }
 
-form{
-    width: 40%;
-}
 
 #formAnchor{
-    padding-top: 2%;
+
+    background-color: aqua;
 }
+
 
 
 /* Form Block*/
 
 
 input, select{
-    float: right;
+    text-align: center;
     border-radius: 6px;
     padding: 5px 10px 5px 10px;
+    border: none;
+    height: 100%;
+    outline: none;
 }
 
 ::placeholder{
     font-size: var(--tiny);
 }
 
-form p{
+form{
+    width: 40%;
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 20px;
+
+}   
+
+form p{ 
     font-size: 20px;
     text-transform: capitalize;
 }
 
 .q-a{
     display: flex;
-    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 1px solid black;
 }
 
 
 .question{
-    width: 44%;
+    width: 45%;
+    border-left: 1px solid black;
 }
 
-.result{
-    padding-left: 50px;
+.answer{
+    border-left: 2px solid white;
+    width: 55%;
+}
+
+.for-two{
+    background-color: bisque;
 }
 
 strong{
     font-size: var(--medium);
 }
 
-
+input:focus{
+    outline: none;
+}
