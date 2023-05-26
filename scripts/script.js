@@ -39,8 +39,8 @@ form.addEventListener("submit", function (event) {
   var members = document.getElementById("members").value;
 
   //the percentage of time spent eating in restaurants
-  var restaurantsPercentage =
-    document.getElementById("restaurants_percentage").value * 8.68;
+  // var restaurantsPercentage =
+  //   document.getElementById("restaurants_percentage").value * 8.68;
 
   //the percentage of time choosing inexpensive restaurants
   var inexpensiveRestaurantsPercentage =
@@ -70,7 +70,7 @@ form.addEventListener("submit", function (event) {
   // Output the values
   console.log("Currency:", currency);
   console.log("Members of household:", members);
-  console.log("Restaurants percentage:", restaurantsPercentage);
+  // console.log("Restaurants percentage:", restaurantsPercentage);
   console.log(
     "Inexpensive restaurants percentage:",
     inexpensiveRestaurantsPercentage
@@ -91,15 +91,25 @@ form.addEventListener("submit", function (event) {
       let trueCostOfLiving = singleCostOfLiving * members;
       let totalCost =
         trueCostOfLiving +
-        restaurantsPercentage +
         inexpensiveRestaurantsPercentage +
         goingOutMonthly +
         gymMembership +
         clothesAndShoes;
 
+      var generalCost = document.getElementById("city-cost");
+      generalCost.innerHTML =
+        "The Cost of Living In Your City is:" + totalCost.toFixed(0) + "$";
+
       if (income > totalCost) {
         let excessFunds = income - totalCost;
         let safeSavings = excessFunds / 2;
+        var personalCost = document.getElementById("personal-cost");
+        personalCost.innerHTML =
+          "your customized cost of living: " + totalCost + "$";
+
+        var personalSaving = document.getElementById("personal-saving");
+        personalSaving.innerHTML =
+          "budget buddy recommends you to save: " + safeSavings + "$";
 
         console.log("your general cost of living: " + trueCostOfLiving + "$");
         console.log("your customized cost of living: " + totalCost + "$");
@@ -108,6 +118,13 @@ form.addEventListener("submit", function (event) {
           "budget buddy recommends you to save: " + safeSavings + "$"
         );
       } else {
+        var personalCost = document.getElementById("personal-cost");
+        personalCost.innerHTML =
+          "your customized cost of living: " + totalCost + "$";
+
+        var personalSaving = document.getElementById("personal-saving");
+        personalSaving.innerHTML =
+          "budget buddy recommends you should look for  more affordable place to move within your budget";
         console.log(
           "budget buddy recommends you should look for  more affordable place to move within your budget"
         );
