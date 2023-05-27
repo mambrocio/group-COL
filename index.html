@@ -93,7 +93,17 @@
         id="options"
         class="standard_margin estimator_form text-center"
         method="get">
-        <div id="formAnchor">&nbsp;</div>
+        <div id="formAnchor">        
+            <div class="q-a">
+            <div class="question">        
+                <p>
+                Expenses
+                </p>
+            </div>
+            <div class="answer">
+                <p>Cost</p>
+            </div>
+            </div></div>
         <div class="q-a">
           <div class="question">
             <p>What City Would You Like To Live In?</p>
@@ -109,13 +119,13 @@
           </div>
         </div>
         <div class="q-a">
-        <div class="question">        
+        <div class="question for-two">        
             <p>
                 Select Currency
             </p>
         </div>
-        <div class="answer">
-            <select id="displayCurrency" name="displayCurrency">
+        <div class="answer for-two">
+            <select id="displayCurrency" name="displayCurrency" class="for-two">
                 <option value="EUR">EUR</option>
                 <option value="USD" selected="selected">USD</option>
                 <option value="---">---</option>
@@ -296,13 +306,14 @@
           </div>
         </div>
         <div class="q-a">
-            <div class="question">        
+            <div class="question for-two">        
                 <p>
                 How Many Members of your household:
                 </p>
             </div>
-            <div class="answer">
+            <div class="answer for-two">
                 <input type="text" 
+                class="for-two"
                 name="members" 
                 id="members" 20
                 value="1" />
@@ -336,13 +347,13 @@
           </div>
         </div>
         <div class="q-a">
-            <div class="question">        
+            <div class="question for-two">        
                 <p>
                 How Often Are You Going Out And Indulging In Night Life:
                 </p>
             </div>
-            <div class="answer">
-                <select id="going_out_monthly" onchange="getValues()">
+            <div class="answer for-two">
+                <select id="going_out_monthly" onchange="getValues()" class="for-two">
                 <option value="100.0">A lot</option>
                 <option value="25.0" selected="selected">Moderate</option>
                 <option value="10.0">Low</option>
@@ -357,7 +368,7 @@
                 </p>
                 </div>
                 <div class="answer">
-                <select id="alcoholic_drinks" onchange="getValues()">
+                <select id="alcoholic_drinks" onchange="getValues()" >
                 <option value="100.0">A lot</option>
                 <option value="25.0" selected="selected">Moderate</option>
                 <option value="10.0">Low</option>
@@ -366,12 +377,12 @@
             </div>
             </div>
             <div class="q-a">
-            <div class="question">        
+            <div class="question for-two">        
                 <p>
                 How Often Are You Driving a car:
                 </p>    
             </div>
-            <div class="answer">
+            <div class="answer for-two">
                 <select id="driving_car" onchange="getValues()">
                 <option value="100.0">A lot</option>
                 <option value="40.0" selected="selected">Moderate</option>
@@ -395,12 +406,12 @@
             </div>
             </div>
             <div class="q-a">
-            <div class="question">        
+            <div class="question for-two">        
                 <p>
                 How often Are You going on Vacation and Traveling:
                 </p>            
             </div>
-            <div class="answer">
+            <div class="answer for-two">
                 <select id="vacation" onchange="getValues()">
                 <option value="150.0">
                 Three per year (one week each), relatively expensive
@@ -436,13 +447,13 @@
             </div>
     
             </div>
-            <div class="q-a">
-            <div class="question">        
+            <div class="q-a ">
+            <div class="question for-two">        
                 <p>
                 Would You Like to Include Rent:
                 </p>
             </div>
-            <div class="answer">
+            <div class="answer for-two">
                 <select id="rent">
                 <option value="true">Yes</option>
                 <option value="false" selected="selected">No</option>
@@ -463,12 +474,12 @@
             </div>
             </div>
             <div class="q-a">
-            <div class="question">        
+            <div class="question for-two">        
                 <p>
                 Number Of Children:
                 </p>
                 </div>
-                <div class="answer">
+                <div class="answer for-two">
                 <input
                 type="text"
                 name="child_count"
@@ -508,10 +519,10 @@
         ></div>
 
         <div id="stateName">
-            <strong>Example State</strong>
+
         </div>
         <div id="state">
-          <img src="assets/images/state_ex.PNG" />
+
         </div>
         <div class="personal-budget">
           <strong>Your Personal Cost of Living Is:</strong>
@@ -526,4 +537,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="scripts/script.js" async></script>
 </body>
+
+<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+src="https://www.google.com/maps/embed/v1/view?center=...&zoom=...&key=..."></iframe>
 </html>
