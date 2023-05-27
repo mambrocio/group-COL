@@ -234,6 +234,11 @@ input, select{
 form {
   width: 40%;
   opacity: 0%;
+  width: 40%;
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 20px;
+
 }
 
 #formAnchor {
@@ -253,13 +258,6 @@ select {
   font-size: var(--tiny);
 }
 
-form{
-    width: 40%;
-    border: 1px solid black;
-    padding: 25px;
-    border-radius: 20px;
-
-}   
 
 form p{ 
     font-size: 20px;
@@ -287,6 +285,7 @@ form p{
 .for-two{
     background-color: bisque;
 }
+
 form p {
   font-size: 20px;
   text-transform: capitalize;
@@ -322,3 +321,6 @@ input:focus{
   margin-top: 16px;
   margin-bottom: 28px;
 }
+
+
+
