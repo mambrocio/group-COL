@@ -27,9 +27,34 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: "Domine", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans- serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 85%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container h1 {
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+
+body{
+    font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-  serif;
+
 }
 
 html {
@@ -58,6 +83,10 @@ html {
   animation-iteration-count: 1;
   animation-delay: 0.25s;
 }
+
+
+
+/*  Hero Styles */
 
 
 .hero{
@@ -135,6 +164,7 @@ p {
   background-repeat: no-repeat;
   background-position: right 32%;
   border-radius: 0% 0% 2% 2%;
+
 }
 
 .logo {
@@ -203,13 +233,14 @@ a {
     
 }
 
-
 #formAnchor{
 
     background-color: aqua;
 }
 
-
+#formAnchor{
+    background-color: aqua;
+}
 
 /* Form Block*/
 
@@ -247,6 +278,7 @@ select {
   float: right;
   border-radius: 6px;
   padding: 5px 10px 5px 10px;
+
 }
 
 ::placeholder {
@@ -277,6 +309,7 @@ form p{
 .question{
     width: 45%;
     border-left: 1px solid black;
+
 }
 
 .answer{
@@ -314,7 +347,6 @@ input:focus{
     outline: none;
 /* results */
 }
-
 #city-cost,
 #personal-cost,
 #personal-saving {
@@ -322,3 +354,20 @@ input:focus{
   margin-top: 16px;
   margin-bottom: 28px;
 }
+.answer{
+    border-left: 2px solid white;
+    width: 55%;
+}
+
+.for-two{
+    background-color: bisque;
+}
+
+strong {
+  font-size: var(--medium);
+}
+
+input:focus{
+    outline: none;
+}
+
