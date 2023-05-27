@@ -4,6 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- map box styling and java script link -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <title>Budget Buddy: Cost Of Living Finder</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/coins.png" />
     <meta name="description" content="" />
@@ -459,15 +465,23 @@
               value="Submit"
               class="bigger_button"
             />
-
           </div>
         </div>
       </form>
       <section class="result" id class="resultTab">
         <div class="cost-of-city">
-          <h1 id="city-cost">The Cost of Living In Your City is:</h1>
-          <p></p>
+          <strong>The Cost of Living In Your City is:</strong>
+          <h1 id="city-cost"></h1>
         </div>
+        <div class="map-title p-4">
+          <strong></strong>
+        </div>
+        <div
+          id="map"
+          class="mapBox my-3"
+          style="width: 607px; height: 341px"
+        ></div>
+
         <div id="stateName">
           <strong>Example State</strong>
         </div>
@@ -475,10 +489,11 @@
           <img src="assets/images/state_ex.PNG" />
         </div>
         <div class="personal-budget">
-          <h1 id="personal-cost">Your Personal Cost of Living Is:</h1>
-          <p></p>
-          <h1 id="personal Saving">Your Recommended Monthly Saving Is:</h1>
-          <p></p>
+          <strong>Your Personal Cost of Living Is:</strong>
+          <h1 id="personal-cost"></h1>
+
+          <strong>Your Recommended Monthly Saving Is:</strong>
+          <h1 id="personal-saving"></h1>
         </div>
       </section>
     </section>
