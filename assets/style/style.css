@@ -192,7 +192,6 @@ a {
   padding-bottom: 5.3%;
 }
 
-<<<<<<< HEAD
 .instructions{
     height: 50%;
     width: 24%;
@@ -248,14 +247,12 @@ select {
   float: right;
   border-radius: 6px;
   padding: 5px 10px 5px 10px;
->>>>>>> 7889f75e21f78a149c219c42989a9d41a72c0526
 }
 
 ::placeholder {
   font-size: var(--tiny);
 }
 
-<<<<<<< HEAD
 form{
     width: 40%;
     border: 1px solid black;
