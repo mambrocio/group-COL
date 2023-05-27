@@ -1,86 +1,121 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- map box styling and java script link -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <title>Budget Buddy: Cost Of Living Finder</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/coins.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/coins.png" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
     /> -->
     <link rel="stylesheet" href="assets/style/style.css" />
-</head>
-<body>
-
-<section class="hero clearfix">
-    <div class="container">
+  </head>
+  <body>
+    <section class="hero clearfix">
+      <div class="container">
         <img class="logo" src="./assets/images/logo.png" />
         <h1>Your Convenient Cost Of Living Finder</h1>
         <p class="hero-desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
+          "At Budget Buddy, our mission is to empower individuals to make
+          informed financial decisions by providing accurate and comprehensive
+          cost-of-living data for any city they search. We believe that everyone
+          deserves to understand the financial implications of their chosen
+          location, and we strive to deliver the necessary insights. Through our
+          innovative budgeting app, we aim to assist users in optimizing their
+          personal finances by leveraging their monthly income to prescribe a
+          tailored saving budget. With Budget Buddy, users can confidently
+          navigate their financial journey, achieve their savings goals, and
+          create a solid foundation for a secure future."
         </p>
         <p class="arrow">
-        <a href="#formAnchor">➤</a>
+          <a href="#formAnchor">➤</a>
         </p>
-    </div>
+      </div>
     </section>
 
-
-
-
-<section class="form-section container justify-content-center">
-    <div class="instructions">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-    </div>
-    <form
+    <section class="form-section container justify-content-center">
+      <div class="instructions">
+        <h1 class="instruction-title">Instructions</h1>
+        <ul class="instruction-list">
+          <li>On the homepage, you will find a search form.</li>
+          <li>
+            Fill out the form by entering the name of the city or state you want
+            to know the cost of living for.
+          </li>
+          <li>
+            Click on the "Search" button or press Enter to submit the form.
+          </li>
+          <li>
+            Budget Buddy will retrieve the cost of living data for the specified
+            location.
+          </li>
+          <li>
+            Once the cost of living data is fetched, you will be presented with
+            a customized cost of living assessment for that city or state.
+          </li>
+          <li>
+            Review the cost of living assessment to gain insights into various
+            expenses such as housing, transportation, groceries, utilities, etc.
+          </li>
+          <li>
+            Budget Buddy will also generate a budget saving assessment based on
+            your monthly income.
+          </li>
+          <li>
+            Explore the saving assessment to understand how much you should
+            allocate for different categories and expenses.
+          </li>
+          <li>
+            Use the provided saving assessment as a guideline to plan your
+            monthly budget and savings goals.
+          </li>
+          <li>
+            Budget Buddy aims to assist you in making informed financial
+            decisions and optimizing your personal finances.
+          </li>
+          <li>
+            Repeat the process whenever you want to explore the cost of living
+            and receive a tailored budget saving assessment for a different city
+            or state.
+          </li>
+        </ul>
+      </div>
+      <form
         name="options"
         id="options"
         class="standard_margin estimator_form text-center"
         method="get">
-        <div id="formAnchor">        
-            <div class="q-a">
-            <div class="question">        
-                <p>
-                Expenses
-                </p>
-            </div>
-            <div class="answer">
-                <p>Cost</p>
-            </div>
-            </div></div>
+        <div id="formAnchor">&nbsp;</div>
+        <div class="q-a">
+          <div class="question">
+            <p>What City Would You Like To Live In?</p>
+          </div>
+          <div class="answer">
+            <input
+              type="text"
+              name="Search-bar"
+              id="search-bar"
+              placeholder="Enter City"
+              value=""
+            />
+          </div>
+        </div>
         <div class="q-a">
         <div class="question">        
-            <p>
-            What City Would You Like To Live In?
-            </p>
-        </div>
-        <div class="answer">
-            <input
-            type="text"
-            name="Search-bar"
-            id="search-bar"
-            placeholder="Enter City"
-            value=""
-        />
-        </div>
-        </div>
-        <div class="q-a">
-        <div class="question for-two">        
             <p>
                 Select Currency
             </p>
         </div>
-        <div class="answer for-two">
-            <select id="displayCurrency" name="displayCurrency" class="for-two">
+        <div class="answer">
+            <select id="displayCurrency" name="displayCurrency">
                 <option value="EUR">EUR</option>
                 <option value="USD" selected="selected">USD</option>
                 <option value="---">---</option>
@@ -247,68 +282,67 @@
             </div>
         </div>
         <div class="q-a">
-            <div class="question">        
-                <p>
-                What Is Your Yearly Income:
-                </p>
-            </div>
-        <div class="answer">
-                <input
-                type="text"
-                name="income"
-                id="yearly_income"
-                placeholder="45,000"
-                value=""
-        />
-        </div>
+          <div class="question">
+            <p>What Is Your Yearly Income:</p>
+          </div>
+          <div class="answer">
+            <input
+              type="text"
+              name="income"
+              id="yearly_income"
+              placeholder="45,000"
+              value=""
+            />
+          </div>
         </div>
         <div class="q-a">
-            <div class="question for-two">        
+            <div class="question">        
                 <p>
                 How Many Members of your household:
                 </p>
             </div>
-            <div class="answer for-two">
+            <div class="answer">
                 <input type="text" 
-                class="for-two"
                 name="members" 
                 id="members" 20
                 value="1" />
             </div>
             </div>
         <div class="q-a">
-            <div class="question">        
-                <p>
-                What Estimated Percentage Of Your Meals Are Eaten At Fast Food Restaurants:
-                </p>
-            </div>
-            <div class="answer">
-                <select
-                id="inexpensive_restaurants_percentage"
-                name="inexpensive_restaurants_percentage"
-                onchange="getValues()">
-                <option value="0.0">0.0%</option>
-                <option value="10.0">10.0%</option>
-                <option value="20.0">20.0%</option>
-                <option value="30.0">30.0%</option>
-                <option value="40.0">40.0%</option>
-                <option value="50.0" selected="selected">50.0%</option>
-                <option value="60.0">60.0%</option>
-                <option value="70.0">70.0%</option>
-                <option value="80.0">80.0%</option>
-                <option value="90.0">90.0%</option>
-                <option value="100.0">100.0%</option>
-                </select>
-            </div>
-            </div>
+          <div class="question">
+            <p>
+              What Estimated Percentage Of Your Meals Are Eaten At Fast Food
+              Restaurants:
+            </p>
+          </div>
+          <div class="answer">
+            <select
+              id="inexpensive_restaurants_percentage"
+              name="inexpensive_restaurants_percentage"
+              onchange="getValues()"
+            >
+              <option value="0.0">0.0%</option>
+              <option value="10.0">10.0%</option>
+              <option value="20.0">20.0%</option>
+              <option value="30.0">30.0%</option>
+              <option value="40.0">40.0%</option>
+              <option value="50.0" selected="selected">50.0%</option>
+              <option value="60.0">60.0%</option>
+              <option value="70.0">70.0%</option>
+              <option value="80.0">80.0%</option>
+              <option value="90.0">90.0%</option>
+              <option value="100.0">100.0%</option>
+            </select>
+          </div>
+        </div>
         <div class="q-a">
-            <div class="question for-two">        
+            <div class="question">        
                 <p>
                 How Often Are You Going Out And Indulging In Night Life:
                 </p>
             </div>
-            <div class="answer for-two">
-                <select id="going_out_monthly" onchange="getValues()" class="for-two">
+            <div class="answer">
+                <select id="going_out_monthly" onchange="getValues()">
                 <option value="100.0">A lot</option>
                 <option value="25.0" selected="selected">Moderate</option>
                 <option value="10.0">Low</option>
@@ -323,7 +357,7 @@
                 </p>
                 </div>
                 <div class="answer">
-                <select id="alcoholic_drinks" onchange="getValues()" >
+                <select id="alcoholic_drinks" onchange="getValues()">
                 <option value="100.0">A lot</option>
                 <option value="25.0" selected="selected">Moderate</option>
                 <option value="10.0">Low</option>
@@ -332,12 +366,12 @@
             </div>
             </div>
             <div class="q-a">
-            <div class="question for-two">        
+            <div class="question">        
                 <p>
                 How Often Are You Driving a car:
                 </p>    
             </div>
-            <div class="answer for-two">
+            <div class="answer">
                 <select id="driving_car" onchange="getValues()">
                 <option value="100.0">A lot</option>
                 <option value="40.0" selected="selected">Moderate</option>
@@ -361,26 +395,26 @@
             </div>
             </div>
             <div class="q-a">
-            <div class="question for-two">        
+            <div class="question">        
                 <p>
                 How often Are You going on Vacation and Traveling:
                 </p>            
             </div>
-            <div class="answer for-two">
+            <div class="answer">
                 <select id="vacation" onchange="getValues()">
                 <option value="150.0">
                 Three per year (one week each), relatively expensive
-                </option>
-                <option value="100.0">
+              </option>
+              <option value="100.0">
                 Two per year (one week each), relatively expensive
-                </option>
-                <option value="51.0">
+              </option>
+              <option value="51.0">
                 Once per year (one week each), relatively expensive
-                </option>
-                <option value="49.0">
+              </option>
+              <option value="49.0">
                 Twice per year (one week each), relatively inexpensive
-                </option>
-                <option value="25.0">
+              </option>
+              <option value="25.0">
                 Once per year (one week each), relatively inexpensive
                 </option>
                 <option value="0.0" selected="selected">None</option>
@@ -402,13 +436,13 @@
             </div>
     
             </div>
-            <div class="q-a ">
-            <div class="question for-two">        
+            <div class="q-a">
+            <div class="question">        
                 <p>
                 Would You Like to Include Rent:
                 </p>
             </div>
-            <div class="answer for-two">
+            <div class="answer">
                 <select id="rent">
                 <option value="true">Yes</option>
                 <option value="false" selected="selected">No</option>
@@ -429,12 +463,12 @@
             </div>
             </div>
             <div class="q-a">
-            <div class="question for-two">        
+            <div class="question">        
                 <p>
                 Number Of Children:
                 </p>
                 </div>
-                <div class="answer for-two">
+                <div class="answer">
                 <input
                 type="text"
                 name="child_count"
@@ -451,28 +485,45 @@
             </div>
             <div class="answer">
             <input
-            type="submit"
-            name="Recalculated"
-            value="Submit"
-            class="bigger_button"
+              type="submit"
+              name="Recalculated"
+              value="Submit"
+              class="bigger_button"
             />
-            </div>
-            </div>
-</form>
-    <section class="result" id class="resultTab">
-        <div id="stateName">
+          </div>
+        </div>
+      </form>
+      <section class="result" id class="resultTab">
+        <div class="cost-of-city">
+          <strong>The Cost of Living In Your City is:</strong>
+          <h1 id="city-cost"></h1>
+        </div>
+        <div class="map-title p-4">
+          <strong></strong>
+        </div>
+        <div
+          id="map"
+          class="mapBox my-3"
+          style="width: 607px; height: 341px"
+        ></div>
 
+        <div id="stateName">
+            <strong>Example State</strong>
         </div>
         <div id="state">
-            <img src="assets/images/state_ex.PNG">  
+          <img src="assets/images/state_ex.PNG" />
         </div>
+        <div class="personal-budget">
+          <strong>Your Personal Cost of Living Is:</strong>
+          <h1 id="personal-cost"></h1>
+
+          <strong>Your Recommended Monthly Saving Is:</strong>
+          <h1 id="personal-saving"></h1>
+        </div>
+      </section>
     </section>
-</section>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="scripts/script.js" async></script>
 </body>
-
-<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-src="https://www.google.com/maps/embed/v1/view?center=...&zoom=...&key=..."></iframe>
 </html>
