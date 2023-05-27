@@ -1,65 +1,64 @@
 /* Root Rules */
 
-:root{ 
-	/* Preferred Font Size Rules */
-	--extra-extra-large: 72px;
-	--extra-large: 56px;
-	--large: 48px;
-	--moderate: 40px;
-	--medium: 32px;
-	--small: 24px;
-	--tiny: 16px;
+:root {
+  /* Preferred Font Size Rules */
+  --extra-extra-large: 72px;
+  --extra-large: 56px;
+  --large: 48px;
+  --moderate: 40px;
+  --medium: 32px;
+  --small: 24px;
+  --tiny: 16px;
 
-	/*-Color Rules  */
-	--black: #181616;
-	--white: #fafafa;
+  /*-Color Rules  */
+  --black: #181616;
+  --white: #fafafa;
 }
-
-
 
 /* Desktop Presets */
 
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
 
-
-
-*{
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-  serif;
+body {
+  font-family: "Domine", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans- serif;
 }
 
-
-html{
-	scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-.container{
-	width: 85%;
-	align-items: center;
-	margin: 0 auto;	
+.container {
+  width: 85%;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.clearfix:after{
-	content: "";
-	display: table;
-	clear: both;
+.container h1 {
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Lora', serif; 
-}
-p{
-    color: #201E50;
+.hero-desc {
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.25s;
 }
 
-/*  Hero Styles */
 
 .hero{
     background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
@@ -69,101 +68,260 @@ p{
     background-repeat: no-repeat;
     background-position: right 32%;
     border-radius: 0% 0% 2% 2%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
-.logo{
-    padding: 1% 0 2% 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+@media (prefers-reduced-motion: no-preference) {
+  .instructions-animation {
+    animation-duration: 1s;
+    animation-name: slideInRight;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
 }
 
-h1{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: #17221E;
-    width: 30%;
-    font-size: var(--medium);
-    font-weight: 200;
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
 }
 
-.hero p{
-    padding-top: 20px;
-    font-size: var(--small);
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    text-align: center;
-    color: #0D1B2A;
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
 }
 
-.arrow{
-    transform: rotate(90deg);
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-a{
-    text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+}
+p {
+  color: #201e50;
+}
+
+/*  Hero Styles */
+
+.hero {
+  background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
+  width: 100%;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 32%;
+  border-radius: 0% 0% 2% 2%;
+}
+
+.logo {
+  padding: 1% 0 2% 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #17221e;
+  width: 30%;
+  font-size: var(--medium);
+  font-weight: 200;
+}
+
+.hero p {
+  padding-top: 20px;
+  font-size: var(--small);
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: center;
+  color: #0d1b2a;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+}
+.instruction-title {
+  justify-self: start;
+  font-size: var(--small);
+}
+.instruction-list {
+  font-size: var(--tiny);
+}
+
+.arrow {
+  transform: rotate(90deg);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Section 1 */
 
-.form-section{
-    display: flex;
-    padding-top: 7%;
-    padding-bottom: 5.3%;
+.form-section {
+  display: flex;
+  padding-top: 7%;
+  padding-bottom: 5.3%;
 }
 
+<<<<<<< HEAD
 .instructions{
     height: 50%;
     width: 24%;
     padding-right: 50px;
     font-size: var(--small);
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #3CD3AD
+    
 }
 
-form{
-    width: 40%;
-}
 
 #formAnchor{
-    padding-top: 2%;
+
+    background-color: aqua;
 }
+
 
 
 /* Form Block*/
 
 
 input, select{
-    float: right;
+    text-align: center;
     border-radius: 6px;
     padding: 5px 10px 5px 10px;
+    border: none;
+    height: 100%;
+    outline: none;
 }
 
-::placeholder{
-    font-size: var(--tiny);
+.instructions {
+  height: 50%;
+  width: 24%;
+  padding-right: 50px;
+  font-size: var(--small);
+  opacity: 0%;
 }
 
-form p{
+form {
+  width: 40%;
+  opacity: 0%;
+}
+
+#formAnchor {
+  padding-top: 2%;
+}
+
+/* Form Block*/
+
+input,
+select {
+  float: right;
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+>>>>>>> 7889f75e21f78a149c219c42989a9d41a72c0526
+}
+
+::placeholder {
+  font-size: var(--tiny);
+}
+
+<<<<<<< HEAD
+form{
+    width: 40%;
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 20px;
+
+}   
+
+form p{ 
     font-size: 20px;
     text-transform: capitalize;
 }
 
 .q-a{
     display: flex;
-    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 1px solid black;
 }
 
 
 .question{
-    width: 44%;
+    width: 45%;
+    border-left: 1px solid black;
 }
 
-.result{
-    padding-left: 50px;
+.answer{
+    border-left: 2px solid white;
+    width: 55%;
 }
 
-strong{
-    font-size: var(--medium);
+.for-two{
+    background-color: bisque;
+}
+form p {
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
+.q-a {
+  display: flex;
+  padding-bottom: 20px;
+}
 
+.question {
+  width: 44%;
+}
+
+.result {
+  padding-left: 50px;
+
+}
+
+strong {
+  font-size: var(--medium);
+}
+
+input:focus{
+    outline: none;
+/* results */
+}
+
+#city-cost,
+#personal-cost,
+#personal-saving {
+  width: 20vw;
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
