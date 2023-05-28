@@ -43,7 +43,7 @@
 
     <section class="form-section container justify-content-center">
       <div class="instructions">
-        <h1 class="instruction-title">Instructions</h1>
+        <h2 class="instruction-title">Instructions</h2>
         <ul class="instruction-list">
           <li>On the homepage, you will find a search form.</li>
           <li>
@@ -383,7 +383,7 @@
                 </p>    
             </div>
             <div class="answer for-two">
-                <select id="driving_car" onchange="getValues()">
+                <select id="driving_car" onchange="getValues()" class="for-two">
                 <option value="100.0">A lot</option>
                 <option value="40.0" selected="selected">Moderate</option>
                 <option value="20.0">Low</option>
@@ -412,20 +412,20 @@
                 </p>            
             </div>
             <div class="answer for-two">
-                <select id="vacation" onchange="getValues()">
+                <select id="vacation" onchange="getValues()" class="for-two">
                 <option value="150.0">
                 Three per year (one week each), relatively expensive
-              </option>
-              <option value="100.0">
+            </option>
+            <option value="100.0">
                 Two per year (one week each), relatively expensive
-              </option>
-              <option value="51.0">
+            </option>
+            <option value="51.0">
                 Once per year (one week each), relatively expensive
-              </option>
-              <option value="49.0">
+            </option>
+            <option value="49.0">
                 Twice per year (one week each), relatively inexpensive
-              </option>
-              <option value="25.0">
+            </option>
+            <option value="25.0">
                 Once per year (one week each), relatively inexpensive
                 </option>
                 <option value="0.0" selected="selected">None</option>
@@ -447,26 +447,26 @@
             </div>
     
             </div>
-            <div class="q-a ">
+            <div class="q-a for-two">
             <div class="question for-two">        
                 <p>
                 Would You Like to Include Rent:
                 </p>
             </div>
-            <div class="answer for-two">
-                <select id="rent">
+            <div class="answer ">
+                <select id="rent" class="for-two">
                 <option value="true">Yes</option>
                 <option value="false" selected="selected">No</option>
                 </select>
             </div>
             </div>
             <div class="q-a">
-            <div class="question for-two">        
+            <div class="question">        
                 <p>
                 Number Of Children:
                 </p>
                 </div>
-                <div class="answer for-two">
+                <div class="answer">
                 <input
                 type="text"
                 name="child_count"
@@ -483,26 +483,26 @@
             </div>
             <div class="answer">
             <input
-              type="submit"
-              name="Recalculated"
-              value="Submit"
-              class="bigger_button"
+            type="submit"
+            name="Recalculated"
+            value="Submit"
+            class="bigger_button"
             />
-          </div>
         </div>
-      </form>
-      <section class="result" id class="resultTab">
+        </div>
+    </form>
+    <section class="result" id class="resultTab">
         <div class="cost-of-city">
-          <strong>The Cost of Living In Your City is:</strong>
-          <h1 id="city-cost"></h1>
+        <strong>The Cost of Living In Your City is:</strong>
+        <h3 id="city-cost"></h1>
         </div>
         <div class="map-title p-4">
-          <strong></strong>
+        <strong></strong>
         </div>
         <div
-          id="map"
-          class="mapBox my-3"
-          style="width: 607px; height: 341px"
+        id="map"
+        class="mapBox my-3"
+        style="width: 607px; height: 341px"
         ></div>
 
         <div id="stateName">
@@ -512,14 +512,34 @@
 
         </div>
         <div class="personal-budget">
-          <strong>Your Personal Cost of Living Is:</strong>
-          <h1 id="personal-cost"></h1>
+        <strong>Your Personal Cost of Living Is:</strong>
+        <h3 id="personal-cost"></h1>
 
-          <strong>Your Recommended Monthly Saving Is:</strong>
-          <h1 id="personal-saving"></h1>
+        <strong>Your Recommended Monthly Saving Is:</strong>
+        <h3 id="personal-saving"></h1>
         </div>
-      </section>
+        <div id="chart_div"></div>
     </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="scripts/script.js" async></script>

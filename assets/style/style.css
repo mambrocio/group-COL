@@ -234,7 +234,7 @@ a {
 
 #formAnchor{
 
-    background-color: aqua;
+    background-color: #C4F1BE
 }
 
 
@@ -302,7 +302,7 @@ form p{
 }
 
 .for-two{
-    background-color: bisque;
+    background-color: #A2C3A4;
 }
 
 
@@ -319,35 +319,10 @@ input:focus{
     outline: none;
 /* results */
 }
-#city-cost,
-#personal-cost,
-#personal-saving {
-  width: 20vw;
-  margin-top: 16px;
-  margin-bottom: 28px;
-}
-
-.answer{
-    border-left: 2px solid white;
-    width: 55%;
-}
-
-.for-two{
-    background-color: bisque;
-}
-
-strong {
-  font-size: var(--medium);
-}
-
-input:focus{
-    outline: none;
-}
-
 #vacation{
   max-width: 290px;
 }
 
 .result{
-  justify-content: center;
+  text-align: center;
 }
