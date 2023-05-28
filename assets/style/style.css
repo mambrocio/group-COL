@@ -99,3 +99,28 @@ h1{
 a{
     text-decoration: none;
 }
+/*for mobile tablet devices*/
+@media only screen and (width: 820px) {
+    .hero{
+        padding-bottom: 70%;
+        background-position: center; 
+}.hero p{
+    font-size: var(--medium);
+    width: 95%;
+    padding: 0;
+    text-align: left;
+}
+}
+/*for mobile phone devices*/
+@media only screen and (max-width: 390px) {
+    .hero{
+        padding-bottom: 70%;
+        background-position: center; 
+        
+    }.hero p{
+        font-size: var(--medium);
+        width: 95%;
+        padding: 0;
+        text-align: left;
+    }
+    }
