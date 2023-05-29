@@ -27,7 +27,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: "Domine", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans- serif;
@@ -51,10 +50,9 @@ html {
   animation-iteration-count: 1;
 }
 
-
-body{
-    font-family: 'Domine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-  serif;
-
+body {
+  font-family: "Domine", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans- serif;
 }
 
 html {
@@ -84,22 +82,19 @@ html {
   animation-delay: 0.25s;
 }
 
-
-
 /*  Hero Styles */
 
-
-.hero{
-    background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
-    width: 100%;
-    padding-bottom: 60%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right 32%;
-    border-radius: 0% 0% 2% 2%;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+.hero {
+  background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
+  width: 100%;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 32%;
+  border-radius: 0% 0% 2% 2%;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -164,7 +159,6 @@ p {
   background-repeat: no-repeat;
   background-position: right 32%;
   border-radius: 0% 0% 2% 2%;
-
 }
 
 .logo {
@@ -222,36 +216,34 @@ a {
   padding-bottom: 5.3%;
 }
 
-.instructions{
-    height: 50%;
-    width: 24%;
-    padding-right: 50px;
-    font-size: var(--small);
-    padding: 15px;
-    border-radius: 20px;
-    background-color: #3CD3AD
-    
+.instructions {
+  height: 50%;
+  width: 24%;
+  padding-right: 50px;
+  font-size: var(--small);
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #3cd3ad;
 }
 
-#formAnchor{
-
-    background-color: aqua;
+#formAnchor {
+  background-color: aqua;
 }
 
-#formAnchor{
-    background-color: aqua;
+#formAnchor {
+  background-color: aqua;
 }
 
 /* Form Block*/
 
-
-input, select{
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px 5px 10px;
-    border: none;
-    height: 100%;
-    outline: none;
+input,
+select {
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  height: 100%;
+  outline: none;
 }
 
 .instructions {
@@ -278,47 +270,43 @@ select {
   float: right;
   border-radius: 6px;
   padding: 5px 10px 5px 10px;
-
 }
 
 ::placeholder {
   font-size: var(--tiny);
 }
 
-form{
-    width: 40%;
-    border: 1px solid black;
-    padding: 25px;
-    border-radius: 20px;
-
-}   
-
-form p{ 
-    font-size: 20px;
-    text-transform: capitalize;
+form {
+  width: 40%;
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 20px;
 }
 
-.q-a{
-    display: flex;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    border-right: 1px solid black;
+form p {
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
-
-.question{
-    width: 45%;
-    border-left: 1px solid black;
-
+.q-a {
+  display: flex;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 1px solid black;
 }
 
-.answer{
-    border-left: 2px solid white;
-    width: 55%;
+.question {
+  width: 45%;
+  border-left: 1px solid black;
 }
 
-.for-two{
-    background-color: bisque;
+.answer {
+  border-left: 2px solid white;
+  width: 55%;
+}
+
+.for-two {
+  background-color: bisque;
 }
 form p {
   font-size: 20px;
@@ -336,38 +324,37 @@ form p {
 
 .result {
   padding-left: 50px;
-
 }
 
 strong {
   font-size: var(--medium);
 }
 
-input:focus{
-    outline: none;
-/* results */
+input:focus {
+  outline: none;
+  /* results */
 }
 #city-cost,
 #personal-cost,
 #personal-saving {
   width: 20vw;
   margin-top: 16px;
+  display: flex;
   margin-bottom: 28px;
 }
-.answer{
-    border-left: 2px solid white;
-    width: 55%;
+.answer {
+  border-left: 2px solid white;
+  width: 55%;
 }
 
-.for-two{
-    background-color: bisque;
+.for-two {
+  background-color: bisque;
 }
 
 strong {
   font-size: var(--medium);
 }
 
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
-
