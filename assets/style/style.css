@@ -84,6 +84,14 @@ html {
   animation-delay: 0.25s;
 }
 
+a:visited {
+  color: var(--black)
+}
+
+a:hover{
+  color: #c4f1be;
+}
+
 
 
 /*  Hero Styles */
@@ -95,9 +103,8 @@ html {
     padding-bottom: 60%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right 32%;
+    background-position: right bottom;
     border-radius: 0% 0% 2% 2%;
-    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -159,10 +166,10 @@ p {
 .hero {
   background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
   width: 100%;
-  padding-bottom: 60%;
+  padding-bottom: 90%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right 32%;
+  background-position: center;
   border-radius: 0% 0% 2% 2%;
 
 }
@@ -218,32 +225,22 @@ a {
 
 .form-section {
   display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  columns: 500px 2;
   padding-top: 7%;
   padding-bottom: 5.3%;
 }
 
 .instructions{
     height: 50%;
-    width: 24%;
-    padding-right: 50px;
+    width: 40%;
+    padding: 30px;
     font-size: var(--small);
-    padding: 15px;
     border-radius: 20px;
     background-color: #3CD3AD
     
 }
-
-#formAnchor{
-
-    background-color: aqua;
-}
-
-#formAnchor{
-    background-color: aqua;
-}
-
-/* Form Block*/
-
 
 input, select{
     text-align: center;
@@ -254,44 +251,24 @@ input, select{
     outline: none;
 }
 
-.instructions {
-  height: 50%;
-  width: 24%;
-  padding-right: 50px;
-  font-size: var(--small);
-  opacity: 0%;
-}
 
 form {
-  width: 40%;
+  width: 60%;
   opacity: 0%;
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 10px 10px lightblue;
 }
 
-#formAnchor {
-  padding-top: 2%;
-}
 
 /* Form Block*/
 
-input,
-select {
-  float: right;
-  border-radius: 6px;
-  padding: 5px 10px 5px 10px;
-
-}
 
 ::placeholder {
   font-size: var(--tiny);
 }
 
-form{
-    width: 40%;
-    border: 1px solid black;
-    padding: 25px;
-    border-radius: 20px;
-
-}   
 
 form p{ 
     font-size: 20px;
@@ -308,6 +285,7 @@ form p{
 
 .question{
     width: 45%;
+    padding: 5px;
     border-left: 1px solid black;
 
 }
@@ -318,23 +296,12 @@ form p{
 }
 
 .for-two{
-    background-color: bisque;
-}
-form p {
-  font-size: 20px;
-  text-transform: capitalize;
+    background-color: #A2C3A4;
 }
 
-.q-a {
-  display: flex;
-  padding-bottom: 20px;
-}
-
-.question {
-  width: 44%;
-}
 
 .result {
+  padding-top: 20%;
   padding-left: 50px;
 
 }
@@ -347,27 +314,25 @@ input:focus{
     outline: none;
 /* results */
 }
-#city-cost,
-#personal-cost,
-#personal-saving {
-  width: 20vw;
-  margin-top: 16px;
-  margin-bottom: 28px;
-}
-.answer{
-    border-left: 2px solid white;
-    width: 55%;
+#vacation{
+  max-width: 200px;
 }
 
-.for-two{
-    background-color: bisque;
+.result{
+  text-align: center;
 }
 
-strong {
-  font-size: var(--medium);
+canvas{
+  margin-right: 1000px;
 }
 
-input:focus{
-    outline: none;
-}
+/* Media Query for Responsive  */
 
+/* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
+  Set font to a smaller size if need be
+*/
+
+/* For Tablet and Mobile */
+/* Set display type to blocks and set divs to width of 100%  
+  Def adjust font size according to width
+*/
