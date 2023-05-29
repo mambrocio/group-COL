@@ -84,6 +84,14 @@ html {
   animation-delay: 0.25s;
 }
 
+a:visited {
+  color: var(--black)
+}
+
+a:hover{
+  color: #c4f1be;
+}
+
 
 
 /*  Hero Styles */
@@ -95,9 +103,8 @@ html {
     padding-bottom: 60%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right 32%;
+    background-position: right bottom;
     border-radius: 0% 0% 2% 2%;
-    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -220,6 +227,7 @@ a {
   display: flex;
   padding-top: 7%;
   padding-bottom: 5.3%;
+
 }
 
 .instructions{
@@ -230,11 +238,6 @@ a {
     border-radius: 20px;
     background-color: #3CD3AD
     
-}
-
-#formAnchor{
-
-    background-color: #C4F1BE
 }
 
 
@@ -292,6 +295,7 @@ form p{
 
 .question{
     width: 45%;
+    padding: 5px;
     border-left: 1px solid black;
 
 }
@@ -307,6 +311,7 @@ form p{
 
 
 .result {
+
   padding-left: 50px;
 
 }
@@ -320,9 +325,20 @@ input:focus{
 /* results */
 }
 #vacation{
-  max-width: 290px;
+  max-width: 200px;
 }
 
 .result{
   text-align: center;
 }
+
+/* Media Query for Responsive  */
+
+/* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
+  Set font to a smaller size if need be
+*/
+
+/* For Tablet and Mobile */
+/* Set display type to blocks and set divs to width of 100%  
+  Def adjust font size according to width
+*/
