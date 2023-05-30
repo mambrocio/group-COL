@@ -297,6 +297,7 @@ form p {
   width: 20vw;
   margin-top: 16px;
   display: flex;
+  justify-content: center;
   margin-bottom: 28px;
 }
 
@@ -304,8 +305,9 @@ form p {
   display: flex;
 }
 
-#piechart_3d {
-  justify-content: end;
+#piechart_3d,
+#donutChart {
+  margin-left: 25%;
 }
 
 strong {

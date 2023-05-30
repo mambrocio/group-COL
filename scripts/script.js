@@ -79,7 +79,7 @@ form.addEventListener("submit", function (event) {
     .getElementById("yearly_income")
     .value.replace(",", ""));
 
-  var income = parseFloat(incomeComma) / 12;
+  var income = (parseFloat(incomeComma) * 0.8) / 12;
   //the number of members in the household
   var members = document.getElementById("members").value;
 
@@ -111,6 +111,7 @@ form.addEventListener("submit", function (event) {
   //the amount of childern in the home
   var childCount = document.getElementById("child_count").value;
 
+  // amount of pets in a home
   var dogCount = document.getElementById("dog_count").value * 125;
 
   var catCount = document.getElementById("cat_count").value * 100;
@@ -169,7 +170,7 @@ form.addEventListener("submit", function (event) {
             inexpensiveRestaurantsPercentage;
           var utilites = (data.breakdown[6].estimate * members) / 4;
           var averageRent = (data.breakdown[8].estimate * members) / 4;
-          var nightLife = (data.breakdown[8].estimate * members) / 4;
+          var transportation = (data.breakdown[4].estimate * members) / 4;
           let singleCostOfLiving = data.overall_estimate / 4;
           let trueCostOfLiving = singleCostOfLiving * members;
           let totalCost =
@@ -189,6 +190,9 @@ form.addEventListener("submit", function (event) {
             goingOutMonthly +
             alcoholicDrinks +
             vacation +
+            transportation +
+            groceries +
+            utilites +
             gymMembership +
             clothesAndShoes +
             dogCount +
@@ -205,7 +209,7 @@ form.addEventListener("submit", function (event) {
           var cityTitle = document.getElementById("city-title");
           cityTitle.textContent =
             "The Average Cost of Living In Your City is: ";
-          generalCost.innerHTML = "$" + trueCostOfLiving.toFixed(0);
+          generalCost.innerHTML = trueCostOfLiving.toFixed(0) + currency;
           // child count formula to redefine our values
           if (childCount > 0) {
             childCare = (data.breakdown[9].estimate * members) / 4;
@@ -220,12 +224,12 @@ form.addEventListener("submit", function (event) {
             var personalCost = document.getElementById("personal-cost");
             var personalTitle = document.getElementById("personal-title");
             personalTitle.textContent = "Your Personal Cost of Living Is: ";
-            personalCost.innerHTML = "$" + totalCost.toFixed(0);
+            personalCost.innerHTML = totalCost.toFixed(0) + currency;
             // savings and budget
             var personalSaving = document.getElementById("personal-saving");
             var savingTitle = document.getElementById("saving-title");
             savingTitle.textContent = "Your Recommended Monthly Saving Is: ";
-            personalSaving.innerHTML = "$" + safeSavings.toFixed(0);
+            personalSaving.innerHTML = safeSavings.toFixed(0) + currency;
 
             console.log(
               "your general cost of living: " + trueCostOfLiving + "$"
@@ -236,6 +240,7 @@ form.addEventListener("submit", function (event) {
               "budget buddy recommends you to save:  " + safeSavings + "$"
             );
 
+            // cost breakdown pie chart
             google.charts.load("current", { packages: ["corechart"] });
             google.charts.setOnLoadCallback(drawChart);
             function drawChart() {
@@ -243,6 +248,7 @@ form.addEventListener("submit", function (event) {
                 ["Cost", "Percent of Budget"],
                 ["Gym", gymMembership],
                 ["Eating Out", inexpensiveRestaurantsPercentage],
+                ["tranportation", transportation],
                 ["Leisure Expenses", goingOutMonthly],
                 ["Clothing & Shoes", clothesAndShoes],
                 ["Drinking at Home", alcoholicDrinks],
@@ -261,6 +267,30 @@ form.addEventListener("submit", function (event) {
 
               var chart = new google.visualization.PieChart(
                 document.getElementById("piechart_3d")
+              );
+              chart.draw(data, options);
+            }
+
+            // budget pie chart
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawDonutChart);
+
+            function drawDonutChart() {
+              var data = google.visualization.arrayToDataTable([
+                ["Budget", "Monthly"],
+                ["Cost of Living", totalCost],
+                ["Saving Budget", safeSavings],
+                ["Spending Budget", safeSavings],
+              ]);
+
+              // chart options can choose height, width, hole size, spacing, color, and more
+              var options = {
+                title: "Monthly Budget",
+                pieHole: 0.4,
+              };
+
+              var chart = new google.visualization.PieChart(
+                document.getElementById("donutChart")
               );
               chart.draw(data, options);
             }
