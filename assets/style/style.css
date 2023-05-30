@@ -265,9 +265,11 @@ form p {
   text-transform: capitalize;
 }
 
-form p {
-  font-size: 20px;
-  text-transform: capitalize;
+.q-a {
+  display: flex;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 1px solid black;
 }
 
 .question {
@@ -276,9 +278,9 @@ form p {
   border-left: 1px solid black;
 }
 
-.question {
-  width: 45%;
-  border-left: 1px solid black;
+.answer {
+  border-left: 2px solid white;
+  width: 55%;
 }
 
 .for-two {
@@ -290,14 +292,6 @@ form p {
   padding-left: 50px;
 }
 
-strong {
-  font-size: var(--medium);
-}
-
-input:focus {
-  outline: none;
-  /* results */
-}
 #city-cost,
 #personal-cost,
 #personal-saving {
@@ -306,11 +300,20 @@ input:focus {
   display: flex;
   margin-bottom: 28px;
 }
-.answer {
-  border-left: 2px solid white;
-  width: 55%;
+
+.mapbox {
+  display: flex;
+  justify-content: center;
 }
 
+strong {
+  font-size: var(--medium);
+}
+
+input:focus {
+  outline: none;
+  /* results */
+}
 #vacation {
   max-width: 200px;
 }
@@ -323,9 +326,6 @@ canvas {
   margin-right: 1000px;
 }
 
-input:focus {
-  outline: none;
-}
 /* Media Query for Responsive  */
 
 /* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
