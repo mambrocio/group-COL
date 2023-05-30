@@ -201,10 +201,7 @@ h1 {
   color: #0d1b2a;
 }
 
-.instructions {
-  display: flex;
-  flex-direction: column;
-}
+
 .instruction-title {
   justify-self: start;
   font-size: var(--small);
@@ -224,7 +221,7 @@ a {
 /* Section 1 */
 
 .form-section {
-  display: block;
+  display: flex;
   flex-flow: row wrap;
   flex-wrap: wrap;
   columns: 500px 2;
@@ -234,7 +231,7 @@ a {
 
 .instructions{
     height: 50%;
-    width: 100%;
+    width: 40%;
     padding: 30px;
     font-size: var(--small);
     border-radius: 20px;
@@ -339,15 +336,11 @@ canvas{
 }
 /*for mobile phone devices*/
 @media only screen and (max-width: 390px) {
-  .hero{
-      padding-bottom: 70%;
-      background-position: center; 
-
-  }.hero p{
-      font-size: var(--medium);
-      width: 95%;
-      padding: 0;
-      text-align: left;
+  form {
+    width: 100%;}
+    .instructions{
+      width: 100%;}
+      .form-section {
+        display: block;
   }
-  }
-
+}
