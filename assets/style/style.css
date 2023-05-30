@@ -82,6 +82,10 @@ html {
   animation-delay: 0.25s;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 a:visited {
   color: var(--black);
 }
@@ -90,6 +94,7 @@ a:hover {
   color: #c4f1be;
 }
 
+<<<<<<< HEAD
 /*  Hero Styles */
 
 .hero {
@@ -102,6 +107,24 @@ a:hover {
   border-radius: 0% 0% 2% 2%;
   max-width: 100%;
   height: auto;
+=======
+
+
+/*  Hero Styles */
+
+
+.hero{
+    background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
+    width: 100%;
+    padding-bottom: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 0% 0% 2% 2%;
+    max-width: 100%;
+    height: auto;
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -226,6 +249,7 @@ a {
   padding-bottom: 5.3%;
 }
 
+<<<<<<< HEAD
 .instructions {
   height: 50%;
   width: 40%;
@@ -243,6 +267,28 @@ select {
   border: none;
   height: 100%;
   outline: none;
+=======
+
+
+.instructions{
+    height: 50%;
+    width: 40%;
+    padding: 30px;
+    font-size: var(--small);
+    border-radius: 20px;
+    background-color: #3CD3AD
+    
+}
+
+input, select{
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    height: 100%;
+    outline: none;
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 }
 
 form {
@@ -256,10 +302,18 @@ form {
 
 /* Form Block*/
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 ::placeholder {
   font-size: var(--tiny);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 form p {
   font-size: 20px;
   text-transform: capitalize;
@@ -272,10 +326,18 @@ form p {
   border-right: 1px solid black;
 }
 
+<<<<<<< HEAD
 .question {
   width: 45%;
   padding: 5px;
   border-left: 1px solid black;
+=======
+
+.question{
+    width: 45%;
+    padding: 5px;
+    border-left: 1px solid black;
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 }
 
 .answer {
@@ -283,9 +345,17 @@ form p {
   width: 55%;
 }
 
+<<<<<<< HEAD
 .for-two {
   background-color: #a2c3a4;
 }
+=======
+
+.for-two{
+    background-color: #A2C3A4;
+}
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 
 .result {
   padding-top: 20%;
@@ -314,6 +384,7 @@ input:focus {
   outline: none;
   /* results */
 }
+<<<<<<< HEAD
 #vacation {
   max-width: 200px;
 }
@@ -326,6 +397,31 @@ canvas {
   margin-right: 1000px;
 }
 
+=======
+
+#city-cost,
+#personal-cost,
+#personal-saving {
+  width: 20vw;
+  margin-top: 16px;
+  display: flex;
+  margin-bottom: 28px;
+}
+
+#vacation{
+  max-width: 200px;
+}
+
+.result{
+  text-align: center;
+}
+
+canvas{
+  margin-right: 1000px;
+}
+
+
+>>>>>>> 8764154d0b45ed5821bbbf621e04b767e7355fe8
 /* Media Query for Responsive  */
 
 /* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
