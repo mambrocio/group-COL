@@ -120,6 +120,7 @@
               id="search-bar"
               placeholder="Enter City"
               value=""
+              required
             />
           </div>
         </div>
@@ -307,6 +308,7 @@
               id="yearly_income"
               placeholder="45,000"
               value=""
+              required
             />
           </div>
         </div>
@@ -499,7 +501,7 @@
     </form>
 </section>
 
-  <section id= "resultAnchor" class="resultTab result">
+  <section class="resultTab result">
         <div class="cost-of-city">
         <strong>The Cost of Living In Your City is:</strong>
         <h3 id="city-cost"></h1>
@@ -507,12 +509,15 @@
         <div class="map-title p-4">
         <strong></strong>
         </div>
+        <div id="resultAnchor"></div>
+        
+        
         <div
         id="map"
         class="mapBox my-3"
         style="width: 607px; height: 341px"
         ></div>
-
+        <div id="chart_div"></div>
         <div class="personal-budget">
         <strong>Your Personal Cost of Living Is:</strong>
         <h3 id="personal-cost"></h1>
@@ -520,7 +525,8 @@
         <strong>Your Recommended Monthly Saving Is:</strong>
         <h3 id="personal-saving"></h1>
         </div>
-        <div id="chart_div"></div>
+
+        
     </section>
 
 
