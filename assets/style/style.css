@@ -326,10 +326,6 @@ input:focus {
   text-align: center;
 }
 
-canvas {
-  margin-right: 1000px;
-}
-
 /* Media Query for Responsive  */
 
 /* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
@@ -340,3 +336,6 @@ canvas {
 /* Set display type to blocks and set divs to width of 100%  
   Def adjust font size according to width
 */
+
+
+
