@@ -326,7 +326,6 @@ input:focus {
 canvas {
   margin-right: 1000px;
 }
-<<<<<<< HEAD
 /*for mobile tablet devices*/
 @media only screen and (width: 820px) {
   .hero{
@@ -362,7 +361,6 @@ canvas {
     color: white;
   }
 }
-=======
 
 /* Media Query for Responsive  */
 
@@ -374,4 +372,3 @@ canvas {
 /* Set display type to blocks and set divs to width of 100%  
   Def adjust font size according to width
 */
->>>>>>> 0f582157307187963820a3cabd38a65716c99e13
