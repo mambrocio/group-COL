@@ -205,6 +205,8 @@ h1 {
 }
 .instruction-list {
   font-size: var(--tiny);
+  padding: 10%;
+  line-height: 1.8;
 }
 
 .arrow {
@@ -324,6 +326,10 @@ input:focus {
 
 .result {
   text-align: center;
+}
+
+canvas {
+  margin-right: 1000px;
 }
 
 /* Media Query for Responsive  */
