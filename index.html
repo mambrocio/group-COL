@@ -102,6 +102,7 @@
               id="search-bar"
               placeholder="Enter City"
               value=""
+              required
             />
           </div>
         </div>
@@ -287,6 +288,7 @@
               id="yearly_income"
               placeholder="45,000"
               value=""
+              required
             />
           </div>
         </div>
@@ -480,32 +482,29 @@
       </form>
     </section>
 
-    <section id="resultAnchor" class="resultTab result container">
-      <div class="cost-of-city">
-        <strong id="city-title"></strong>
-        <h1 id="city-cost"></h1>
-      </div>
-      <div class="map-title p-4">
+
+  <section id= "resultAnchor" class="resultTab result">
+        <div class="cost-of-city">
+        <strong>The Cost of Living In Your City is:</strong>
+        <h3 id="city-cost"></h1>
+        </div>
+        <div class="map-title p-4">
         <strong></strong>
-      </div>
-      <div class="map-container">
-        <div id="map" class="mapBox" style="width: 607px; height: 341px; margin: auto; border-radius: 12px"></div>
+        </div>
         <div
-          id="map"
-          class="mapBox"
-          style="width: 607px; height: 405px; margin-left: 30%"
+        id="map"
+        class="mapBox my-3"
+        style="width: 607px; height: 341px"; ma
         ></div>
-      </div>
-      <div class="personal-budget">
-        <strong id="personal-title"></strong>
-        <h1 id="personal-cost"></h1>
-        <div id="piechart_3d" style="width: 900px; height: 500px"></div>
-        <strong id="saving-title"></strong>
-        <h1 id="personal-saving"></h1>
-        <div id="donutChart" style="width: 900px; height: 500px"></div>
-      </div>
-      <!-- Mike's Old Map -->
-      <!-- <div id="chart_div"></div> -->
+
+        <div class="personal-budget">
+        <strong>Your Personal Cost of Living Is:</strong>
+        <h3 id="personal-cost"></h1>
+
+        <strong>Your Recommended Monthly Saving Is:</strong>
+        <h3 id="personal-saving"></h1>
+        </div>
+        <div id="chart_div"></div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
