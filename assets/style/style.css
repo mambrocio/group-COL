@@ -293,7 +293,8 @@ form p {
 
 #city-cost,
 #personal-cost,
-#personal-saving {
+#personal-saving,
+#map {
   width: 20vw;
   margin-top: 16px;
   display: flex;
@@ -326,6 +327,8 @@ input:focus {
   text-align: center;
 }
 
+#map {
+}
 canvas {
   margin-right: 1000px;
 }
