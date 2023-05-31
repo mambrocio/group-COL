@@ -5,6 +5,8 @@ var form = document.getElementById("options");
 var inputName;
 var inputLat;
 var inputLon;
+var childCare;
+var averageRent;
 
 // // pull the search input from index page and give it a variable in our Java Script
 // var urlParams = new URLSearchParams(window.location.search);
@@ -24,40 +26,38 @@ var inputLon;
 //   });
 // });
 
-    // Load the Visualization API and the corechart package.
-    google.charts.load('current', {'packages':['corechart']});
+// Load the Visualization API and the corechart package.
+google.charts.load("current", { packages: ["corechart"] });
 
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.charts.setOnLoadCallback(drawChart);
+// Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
 
-    // Callback that creates and populates a data table,
-    // instantiates the pie chart, passes in the data and
-    // draws it.
-    function drawChart() {
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn("string", "Topping");
+  data.addColumn("number", "Slices");
 
-      // Create the data table.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Slices');
+  data.addRows([
+    ["Mushrooms", 5],
+    ["Onions", 1],
+    ["Olives", 1],
+    ["Zucchini", 1],
+    ["Pepperoni", 2],
+  ]);
 
+  // Set chart options
+  var options = { title: "Current Spnding", width: 400, height: 300 };
 
-      data.addRows([
-        ['Mushrooms', 5],
-        ['Onions', 1],
-        ['Olives', 1],
-        ['Zucchini', 1],
-        ['Pepperoni', 2]
-      ]);
-
-      // Set chart options
-      var options = {'title':'Current Spnding',
-                     'width':400,
-                     'height':300};
-
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.PieChart(
+    document.getElementById("chart_div")
+  );
+  chart.draw(data, options);
+}
 
 // Add an event listener to the form's submit event
 form.addEventListener("submit", function (event) {
@@ -65,12 +65,10 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   PlaySound = function () {
-    var audio = new Audio('../assets/audio/receipt print.mp3');
+    var audio = new Audio("../assets/audio/receipt print.mp3");
     audio.loop = false;
-    audio.play(); 
-}
-
-
+    audio.play();
+  };
 
   var searchInput = document.getElementById("search-bar").value;
   //the selected currency
@@ -81,7 +79,7 @@ form.addEventListener("submit", function (event) {
     .getElementById("yearly_income")
     .value.replace(",", ""));
 
-  var income = parseFloat(incomeComma) / 12;
+  var income = (parseFloat(incomeComma) * 0.8) / 12;
   //the number of members in the household
   var members = document.getElementById("members").value;
 
@@ -113,7 +111,11 @@ form.addEventListener("submit", function (event) {
   //the amount of childern in the home
   var childCount = document.getElementById("child_count").value;
 
-  var rent = document.getElementById("rent").value;
+  // amount of pets in a home
+  var dogCount = document.getElementById("dog_count").value * 125;
+
+  var catCount = document.getElementById("cat_count").value * 100;
+
   // Output the values
   console.log("Currency:", currency);
   console.log("Members of household:", members);
@@ -159,32 +161,75 @@ form.addEventListener("submit", function (event) {
 
       // Perform any additional processing or calculations here
       fetch(
-        `https://www.numbeo.com/api/city_cost_estimator?api_key=${apiKey}&query=${searchInput}&houesehold_members=${members}&children=${childCount}&include_rent=${rent}&currency=${currency}`
+        `https://www.numbeo.com/api/city_cost_estimator?api_key=${apiKey}&query=${inputLat},${inputLon}&members=${members}&children=${childCount}&include_rent=true&currency=${currency}`
       )
         .then((response) => response.json())
         .then((data) => {
+          var groceries =
+            (data.breakdown[2].estimate * members) / 4 -
+            inexpensiveRestaurantsPercentage;
+          var utilites = (data.breakdown[6].estimate * members) / 4;
+          var averageRent = (data.breakdown[8].estimate * members) / 4;
+          var transportation = (data.breakdown[4].estimate * members) / 4;
           let singleCostOfLiving = data.overall_estimate / 4;
           let trueCostOfLiving = singleCostOfLiving * members;
           let totalCost =
             trueCostOfLiving +
             inexpensiveRestaurantsPercentage +
             goingOutMonthly +
+            alcoholicDrinks +
+            vacation +
             gymMembership +
-            clothesAndShoes;
+            clothesAndShoes +
+            dogCount +
+            catCount;
+
+          let exactCost =
+            averageRent +
+            +inexpensiveRestaurantsPercentage +
+            goingOutMonthly +
+            alcoholicDrinks +
+            vacation +
+            transportation +
+            groceries +
+            utilites +
+            gymMembership +
+            clothesAndShoes +
+            dogCount +
+            catCount;
+
+          let breakDown = data.breakdown;
+          console.log(breakDown);
+          console.log(exactCost);
 
           let badBudget = totalCost - income;
 
+          // resutlts cost of living in your city
           var generalCost = document.getElementById("city-cost");
-          generalCost.innerHTML = trueCostOfLiving.toFixed(0) + "$";
+          var cityTitle = document.getElementById("city-title");
+          cityTitle.textContent =
+            "The Average Cost of Living In Your City is: ";
+          generalCost.innerHTML = trueCostOfLiving.toFixed(0) + currency;
+          // child count formula to redefine our values
+          if (childCount > 0) {
+            childCare = (data.breakdown[9].estimate * members) / 4;
+          } else {
+            childCare = 0;
+          }
 
+          // results personal cost
           if (income > totalCost) {
             let excessFunds = income - totalCost;
             let safeSavings = excessFunds / 2;
             var personalCost = document.getElementById("personal-cost");
-            personalCost.innerHTML = totalCost.toFixed(0) + "$";
-
+            var personalTitle = document.getElementById("personal-title");
+            personalTitle.textContent = "Your Personal Cost of Living Is: ";
+            personalCost.innerHTML = totalCost.toFixed(0) + currency;
+            // savings and budget
             var personalSaving = document.getElementById("personal-saving");
-            personalSaving.innerHTML = safeSavings.toFixed(0) + "$";
+            var savingTitle = document.getElementById("saving-title");
+            savingTitle.textContent = "Your Recommended Monthly Saving Is: ";
+            personalSaving.innerHTML = safeSavings.toFixed(0) + currency;
 
             console.log(
               "your general cost of living: " + trueCostOfLiving + "$"
@@ -194,6 +239,61 @@ form.addEventListener("submit", function (event) {
             console.log(
               "budget buddy recommends you to save:  " + safeSavings + "$"
             );
+
+            // cost breakdown pie chart
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+                ["Cost", "Percent of Budget"],
+                ["Gym", gymMembership],
+                ["Eating Out", inexpensiveRestaurantsPercentage],
+                ["tranportation", transportation],
+                ["Leisure Expenses", goingOutMonthly],
+                ["Clothing & Shoes", clothesAndShoes],
+                ["Drinking at Home", alcoholicDrinks],
+                ["Vacation Budget", vacation],
+                ["groceries", groceries],
+                ["Utilites", utilites],
+                ["Pet Budget", dogCount + catCount],
+                ["Childcare", childCare],
+                ["rent", averageRent],
+              ]);
+
+              var options = {
+                title: "Cost Breakdown",
+                is3D: false,
+              };
+
+              var chart = new google.visualization.PieChart(
+                document.getElementById("piechart_3d")
+              );
+              chart.draw(data, options);
+            }
+
+            // budget pie chart
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawDonutChart);
+
+            function drawDonutChart() {
+              var data = google.visualization.arrayToDataTable([
+                ["Budget", "Monthly"],
+                ["Cost of Living", totalCost],
+                ["Saving Budget", safeSavings],
+                ["Spending Budget", safeSavings],
+              ]);
+
+              // chart options can choose height, width, hole size, spacing, color, and more
+              var options = {
+                title: "Monthly Budget",
+                pieHole: 0.4,
+              };
+
+              var chart = new google.visualization.PieChart(
+                document.getElementById("donutChart")
+              );
+              chart.draw(data, options);
+            }
           } else {
             var personalCost = document.getElementById("personal-cost");
             personalCost.innerHTML =
@@ -212,7 +312,6 @@ form.addEventListener("submit", function (event) {
     });
 });
 
-
 //observers to load elements on the bottom of the page when scrolled to
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -222,7 +321,12 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-
-
 observer.observe(document.querySelector(".instructions"));
 observer.observe(document.querySelector("form"));
+
+
+//added dark function for mobile layout//
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
