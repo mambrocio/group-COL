@@ -205,6 +205,8 @@ h1 {
 }
 .instruction-list {
   font-size: var(--tiny);
+  padding: 10%;
+  line-height: 1.8;
 }
 
 .arrow {
