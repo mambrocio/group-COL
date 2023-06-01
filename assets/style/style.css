@@ -303,7 +303,7 @@ form p {
   margin-bottom: 28px;
 }
 
-.personal-budet {
+.personal-budget {
   display: flex;
 }
 
@@ -327,6 +327,7 @@ input:focus {
 .result {
   text-align: center;
 }
+
 
 <<<<<<<<< Temporary merge branch 1
 =========
