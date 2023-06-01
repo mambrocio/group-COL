@@ -387,3 +387,60 @@ input:focus {
 
 
 
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+  .instructions li{
+
+  }
+
+  form p{
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .instructions li{
+
+  }
+
+  form p{
+
+  }
+
+}
+@media screen and (max-width: 425px) {
+
+  .instructions li{
+
+  }
+
+  form p{
+
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .instructions li{
+
+  }
+
+  form p{
+
+  }
+
+}
+
