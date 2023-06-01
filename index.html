@@ -24,8 +24,16 @@
         <h1>Your Convenient Cost Of Living Finder</h1>
         <p class="hero-desc">
           <!-- Our Slogan  -->
-          "Budget Buddy - place where we believe that everyone deserves to understand the financial implications of their chosen location and can confidently navigate their financial journey creating solid foundation for a secure future. Our mission is to empower individuals to make
-          informed financial decisions by providing accurate and comprehensive cost-of-living data for any city they search."
+          "At Budget Buddy, our mission is to empower individuals to make
+          informed financial decisions by providing accurate and comprehensive
+          cost-of-living data for any city they search. We believe that everyone
+          deserves to understand the financial implications of their chosen
+          location, and we strive to deliver the necessary insights. Through our
+          innovative budgeting app, we aim to assist users in optimizing their
+          personal finances by leveraging their monthly income to prescribe a
+          tailored saving budget. With Budget Buddy, users can confidently
+          navigate their financial journey, achieve their savings goals, and
+          create a solid foundation for a secure future."
         </p>
         <p class="arrow">
           <a href="#formAnchor">➤</a>
@@ -43,33 +51,47 @@
       <div class="instructions">
         <h2 class="instruction-title">Instructions</h2>
         <ul class="instruction-list">
-          <li> 
-            Please start by entering City name or State you would like to live in.
-          </li>
+          <li>On the homepage, you will find a search form.</li>
           <li>
-            Follow by entering your desirable "Expenses" criteria for your search (currency, number of your household, etc.).
+            Fill out the form by entering the name of the city or state you want
+            to know the cost of living for.
           </li>
           <li>
             Click on the "Search" button or press Enter to submit the form.
           </li>
           <li>
-            You will be presented with
-            a customized cost of living assessment for your chosen city or state.
+            Budget Buddy will retrieve the cost of living data for the specified
+            location.
           </li>
           <li>
-            Please review the cost of living assessment to gain insights into various
-            expenses such as housing, utilities, etc.
+            Once the cost of living data is fetched, you will be presented with
+            a customized cost of living assessment for that city or state.
           </li>
           <li>
-            Also observe budget saving assessment based on
+            Review the cost of living assessment to gain insights into various
+            expenses such as housing, transportation, groceries, utilities, etc.
+          </li>
+          <li>
+            Budget Buddy will also generate a budget saving assessment based on
             your monthly income.
+          </li>
+          <li>
+            Explore the saving assessment to understand how much you should
+            allocate for different categories and expenses.
+          </li>
+          <li>
+            Use the provided saving assessment as a guideline to plan your
+            monthly budget and savings goals.
+          </li>
+          <li>
+            Budget Buddy aims to assist you in making informed financial
+            decisions and optimizing your personal finances.
           </li>
           <li>
             Repeat the process whenever you want to explore the cost of living
             and receive a tailored budget saving assessment for a different city
             or state.
           </li>
-
         </ul>
       </div>
 
@@ -482,35 +504,31 @@
       </form>
     </section>
 
-
-  <section id= "resultAnchor" class="resultTab result">
-        <div class="cost-of-city">
-        <strong>The Cost of Living In Your City is:</strong>
-        <h3 id="city-cost"></h1>
-        </div>
-        <div class="map-title p-4">
+    <section id="resultAnchor" class="resultTab result">
+      <div class="cost-of-city">
+        <strong id="city-title"></strong>
+        <h1 id="city-cost"></h1>
+      </div>
+      <div class="map-title p-4">
         <strong></strong>
-        </div>
+      </div>
+      <div class="map-container">
         <div
-
           id="map"
           class="mapBox"
-          style="width: 607px; height: 405px; margin: auto;"
-
+          style="width: 607px; height: 405px; margin-left: 30%"
         ></div>
       </div>
       <div class="personal-budget">
-        <div class="sub1">
-          <strong>Your Personal Cost of Living Is:</strong>
-          <h1 id="personal-cost"></h1>
-          <div id="piechart_3d" style="width: 90%"></div>
-        </div>
-        <div class="sub2">
-          <strong>Your Recommended Monthly Saving Is:</strong>
-          <h1 id="personal-saving"></h1>
-          <div id="donutChart" style="width: 90%"></div>
-        </div>
+        <strong id="personal-title"></strong>
+        <h1 id="personal-cost"></h1>
+        <div id="piechart_3d" style="width: 900px; height: 500px"></div>
+        <strong id="saving-title"></strong>
+        <h1 id="personal-saving"></h1>
+        <div id="donutChart" style="width: 900px; height: 500px"></div>
       </div>
+      <!-- Mike's Old Map -->
+      <!-- <div id="chart_div"></div> -->
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
