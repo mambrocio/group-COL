@@ -342,6 +342,46 @@ canvas {
 
 /* Media Query for Responsive  */
 
+@media screen and (max-width: 1024px) {
+  .instructions li{
+
+  }
+
+  form p{
+    text-size-adjust: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .instructions li{
+
+  }
+
+  form p{
+    text-size-adjust: 25px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .instructions li{
+
+  }
+
+  form p{
+    text-size-adjust: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .instructions li{
+
+  }
+
+  form p{
+    text-size-adjust: 35px;
+  }
+}
+
 /* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
   Set font to a smaller size if need be
 */
