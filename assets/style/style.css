@@ -307,9 +307,14 @@ form p {
   display: flex;
 }
 
+.sub1,
+.sub2 {
+  width: 50%;
+}
+
 #piechart_3d,
 #donutChart {
-  margin-left: 25%;
+  margin-left: 0%;
 }
 
 strong {
