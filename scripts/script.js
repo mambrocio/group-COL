@@ -71,6 +71,7 @@ form.addEventListener("submit", function (event) {
   };
 
   var searchInput = document.getElementById("search-bar").value;
+  
   //the selected currency
   var currency = document.getElementById("displayCurrency").value;
 
@@ -203,6 +204,7 @@ form.addEventListener("submit", function (event) {
           console.log(exactCost);
 
           let badBudget = totalCost - income;
+          localStorage.setItem(searchInput, trueCostOfLiving);
 
           // resutlts cost of living in your city
           var generalCost = document.getElementById("city-cost");
