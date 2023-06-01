@@ -13,23 +13,27 @@
     <title>Budget Buddy: Cost Of Living Finder</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/coins.png" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/style/style.css"/>
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/style/style.css" />
   </head>
   <body>
     <!-- Intro Section -->
-
     <section class="hero clearfix">
       <div class="container">
         <img class="logo" src="./assets/images/logo.png" />
         <h1>Your Convenient Cost Of Living Finder</h1>
         <p class="hero-desc">
           <!-- Our Slogan  -->
-          "Budget Buddy - place where we believe that everyone deserves to understand the financial implications of their chosen location and can confidently navigate their financial journey creating solid foundation for a secure future. Our mission is to empower individuals to make
-          informed financial decisions by providing accurate and comprehensive cost-of-living data for any city they search."
+          "At Budget Buddy, our mission is to empower individuals to make
+          informed financial decisions by providing accurate and comprehensive
+          cost-of-living data for any city they search. We believe that everyone
+          deserves to understand the financial implications of their chosen
+          location, and we strive to deliver the necessary insights. Through our
+          innovative budgeting app, we aim to assist users in optimizing their
+          personal finances by leveraging their monthly income to prescribe a
+          tailored saving budget. With Budget Buddy, users can confidently
+          navigate their financial journey, achieve their savings goals, and
+          create a solid foundation for a secure future."
         </p>
         <p class="arrow">
           <a href="#formAnchor">➤</a>
@@ -37,43 +41,57 @@
         </p>
       </div>
     </section>
+
     <!-- Section 2 -->
     <section
-      class="form-section columns is-desktop"
+      class="form-section container justify-content-center"
       id="formAnchor"
     >
-    
       <!-- Instruction forms that helps the user navigate the form and how it works-->
-      <div class="instructions column">
+      <div class="instructions">
         <h2 class="instruction-title">Instructions</h2>
         <ul class="instruction-list">
-          <li> 
-            Please start by entering City name or State you would like to live in.
-          </li>
+          <li>On the homepage, you will find a search form.</li>
           <li>
-            Follow by entering your desirable "Expenses" criteria for your search (currency, number of your household, etc.).
+            Fill out the form by entering the name of the city or state you want
+            to know the cost of living for.
           </li>
           <li>
             Click on the "Search" button or press Enter to submit the form.
           </li>
           <li>
-            You will be presented with
-            a customized cost of living assessment for your chosen city or state.
+            Budget Buddy will retrieve the cost of living data for the specified
+            location.
           </li>
           <li>
-            Please review the cost of living assessment to gain insights into various
-            expenses such as housing, utilities, etc.
+            Once the cost of living data is fetched, you will be presented with
+            a customized cost of living assessment for that city or state.
           </li>
           <li>
-            Also observe budget saving assessment based on
+            Review the cost of living assessment to gain insights into various
+            expenses such as housing, transportation, groceries, utilities, etc.
+          </li>
+          <li>
+            Budget Buddy will also generate a budget saving assessment based on
             your monthly income.
+          </li>
+          <li>
+            Explore the saving assessment to understand how much you should
+            allocate for different categories and expenses.
+          </li>
+          <li>
+            Use the provided saving assessment as a guideline to plan your
+            monthly budget and savings goals.
+          </li>
+          <li>
+            Budget Buddy aims to assist you in making informed financial
+            decisions and optimizing your personal finances.
           </li>
           <li>
             Repeat the process whenever you want to explore the cost of living
             and receive a tailored budget saving assessment for a different city
             or state.
           </li>
-
         </ul>
       </div>
 
@@ -82,11 +100,11 @@
       <form
         name="options"
         id="options"
-        class="column"
+        class="standard_margin estimator_form text-center"
         method="get"
       >
-        <div>
-          <div class="q-a odd-row">
+        <div id="formAnchor">
+          <div class="q-a">
             <div class="question">
               <p>Expenses</p>
             </div>
@@ -111,11 +129,11 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>Select Currency</p>
           </div>
-          <div class="answer odd-row">
-            <select id="displayCurrency" name="displayCurrency" class="odd-row">
+          <div class="answer for-two">
+            <select id="displayCurrency" name="displayCurrency" class="for-two">
               <option value="EUR">EUR</option>
               <option value="USD" selected="selected">USD</option>
               <option value="---">---</option>
@@ -297,13 +315,13 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>How Many Members of your household:</p>
           </div>
-          <div class="answer odd-row">
+          <div class="answer for-two">
             <input
               type="text"
-              class="odd-row"
+              class="for-two"
               name="members"
               id="members"
               20
@@ -339,14 +357,14 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>How Often Are You Going Out And Indulging In Night Life:</p>
           </div>
-          <div class="answer odd-row">
+          <div class="answer for-two">
             <select
               id="going_out_monthly"
               onchange="getValues()"
-              class="odd-row"
+              class="for-two"
             >
               <option value="100.0">A lot</option>
               <option value="25.0" selected="selected">Moderate</option>
@@ -369,11 +387,11 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>How Often Are You Driving a car:</p>
           </div>
-          <div class="answer odd-row">
-            <select id="driving_car" onchange="getValues()" class="odd-row">
+          <div class="answer for-two">
+            <select id="driving_car" onchange="getValues()" class="for-two">
               <option value="100.0">A lot</option>
               <option value="40.0" selected="selected">Moderate</option>
               <option value="20.0">Low</option>
@@ -396,11 +414,11 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>How often Are You going on Vacation and Traveling:</p>
           </div>
-          <div class="answer odd-row">
-            <select id="vacation" onchange="getValues()" class="odd-row">
+          <div class="answer for-two">
+            <select id="vacation" onchange="getValues()" class="for-two">
               <option value="150.0">Three per year, expensive</option>
               <option value="100.0">Two per year, expensive</option>
               <option value="51.0">Once per year, expensive</option>
@@ -425,15 +443,15 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>Number Of Children:</p>
           </div>
-          <div class="answer odd-row">
+          <div class="answer for-two">
             <input
               type="text"
               name="child_count"
               id="child_count"
-              class="odd-row"
+              class="for-two"
               value="0"
               onchange="getValues()"
               size="2"
@@ -456,14 +474,14 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question odd-row">
+          <div class="question for-two">
             <p>Number Of Cats:</p>
           </div>
-          <div class="answer odd-row">
+          <div class="answer for-two">
             <input
               type="text"
               name="cat_count"
-              class="odd-row"
+              class="for-two"
               id="cat_count"
               value="0"
               onchange="getValues()"
@@ -484,42 +502,47 @@
         </div>
         <a href="#resultAnchor">See Results Here</a>
       </form>
-      
     </section>
 
-
-  <section id= "resultAnchor" class="resultTab result">
-        <div class="cost-of-city">
-        <strong>The Cost of Living In Your City is:</strong>
-        <h3 id="city-cost"></h1>
-        </div>
-        <div class="map-title p-4">
+    <section id="resultAnchor" class="resultTab result">
+      <div class="cost-of-city">
+        <strong id="city-title"></strong>
+        <h1 id="city-cost"></h1>
+      </div>
+      <div class="map-title p-4">
         <strong></strong>
-        </div>
+      </div>
+      <div class="map-container">
         <div
-
           id="map"
           class="mapBox"
-          style="width: 607px; height: 405px; margin: auto;"
-
+          style="width: 607px; height: 405px; margin-left: 30%"
         ></div>
-
-        <div class="personal-budget columns is-desktop">
-        <div class="budget-1 column">
-        <strong>Your Personal Cost of Living Is:</strong>
-        <h3 id="personal-cost"></h3>
-        </div>
-        <div class="budget-2 column">
-        <strong>Your Recommended Monthly Saving Is:</strong>
-        <h3 id="personal-saving"></h1>
-        </div>
-        </div>
-        
+      </div>
+      <div class="personal-budget">
+        <strong id="personal-title"></strong>
+        <h1 id="personal-cost"></h1>
+        <div id="piechart_3d" style="width: 900px; height: 500px"></div>
+        <strong id="saving-title"></strong>
+        <h1 id="personal-saving"></h1>
+        <div id="donutChart" style="width: 900px; height: 500px"></div>
+      </div>
+      <!-- Mike's Old Map -->
+      <!-- <div id="chart_div"></div> -->
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-    
     <script src="scripts/script.js" async></script>
   </body>
+
+  <!-- Large Black Box at the end of page -->
+  <!-- <iframe
+    width="600"
+    height="450"
+    style="border: 0"
+    loading="lazy"
+    allowfullscreen
+    src="https://www.google.com/maps/embed/v1/view?center=...&zoom=...&key=..."
+  ></iframe> -->
 </html>
