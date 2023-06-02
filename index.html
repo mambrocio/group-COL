@@ -15,6 +15,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
     <!-- Intro Section -->
@@ -44,11 +45,11 @@
 
     <!-- Section 2 -->
     <section
-      class="form-section container justify-content-center"
+      class="form-section columns is-desktop"
       id="formAnchor"
     >
       <!-- Instruction forms that helps the user navigate the form and how it works-->
-      <div class="instructions">
+      <div class="instructions column">
         <h2 class="instruction-title">Instructions</h2>
         <ul class="instruction-list">
           <li>On the homepage, you will find a search form.</li>
@@ -100,7 +101,7 @@
       <form
         name="options"
         id="options"
-        class="standard_margin estimator_form text-center"
+        class="column"
         method="get"
       >
         <div id="formAnchor">
@@ -129,11 +130,11 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-row">
             <p>Select Currency</p>
           </div>
-          <div class="answer for-two">
-            <select id="displayCurrency" name="displayCurrency" class="for-two">
+          <div class="answer odd-row">
+            <select id="displayCurrency" name="displayCurrency" class="odd-row">
               <option value="EUR">EUR</option>
               <option value="USD" selected="selected">USD</option>
               <option value="---">---</option>
@@ -310,18 +311,17 @@
               id="yearly_income"
               placeholder="45,000"
               value=""
-              required
-            />
+              required            />
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-two">
             <p>How Many Members of your household:</p>
           </div>
-          <div class="answer for-two">
+          <div class="answer odd-row">
             <input
               type="text"
-              class="for-two"
+              class="odd-row"
               name="members"
               id="members"
               20
@@ -357,14 +357,14 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-row">
             <p>How Often Are You Going Out And Indulging In Night Life:</p>
           </div>
-          <div class="answer for-two">
+          <div class="answer odd-row">
             <select
               id="going_out_monthly"
               onchange="getValues()"
-              class="for-two"
+              class="odd-row"
             >
               <option value="100.0">A lot</option>
               <option value="25.0" selected="selected">Moderate</option>
@@ -387,11 +387,11 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-row">
             <p>How Often Are You Driving a car:</p>
           </div>
-          <div class="answer for-two">
-            <select id="driving_car" onchange="getValues()" class="for-two">
+          <div class="answer odd-row">
+            <select id="driving_car" onchange="getValues()" class="odd-row">
               <option value="100.0">A lot</option>
               <option value="40.0" selected="selected">Moderate</option>
               <option value="20.0">Low</option>
@@ -414,11 +414,11 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-row">
             <p>How often Are You going on Vacation and Traveling:</p>
           </div>
-          <div class="answer for-two">
-            <select id="vacation" onchange="getValues()" class="for-two">
+          <div class="answer odd-row">
+            <select id="vacation" onchange="getValues()" class="odd-row">
               <option value="150.0">Three per year, expensive</option>
               <option value="100.0">Two per year, expensive</option>
               <option value="51.0">Once per year, expensive</option>
@@ -443,15 +443,15 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-row">
             <p>Number Of Children:</p>
           </div>
-          <div class="answer for-two">
+          <div class="answer odd-row">
             <input
               type="text"
               name="child_count"
               id="child_count"
-              class="for-two"
+              class="odd-row"
               value="0"
               onchange="getValues()"
               size="2"
@@ -474,14 +474,14 @@
           </div>
         </div>
         <div class="q-a">
-          <div class="question for-two">
+          <div class="question odd-row">
             <p>Number Of Cats:</p>
           </div>
-          <div class="answer for-two">
+          <div class="answer odd-row">
             <input
               type="text"
               name="cat_count"
-              class="for-two"
+              class="odd-row"
               id="cat_count"
               value="0"
               onchange="getValues()"
@@ -512,20 +512,23 @@
       <div class="map-title p-4">
         <strong></strong>
       </div>
-      <div class="map-container">
+      <div class="map-container column">
         <div
           id="map"
           class="mapBox"
-          style="width: 607px; height: 405px; margin-left: 30%"
+          style="height: 405px;  margin-left:auto; margin-right: auto;"
         ></div>
       </div>
-      <div class="personal-budget">
+      <div class="personal-budget columns is-desktop">
+        <div class="column is-half">
         <strong id="personal-title"></strong>
         <h1 id="personal-cost"></h1>
-        <div id="piechart_3d" style="width: 900px; height: 500px"></div>
+        <div id="piechart_3d" style="height: 500px"></div>
+        </div>
+        <div class="column is-half">
         <strong id="saving-title"></strong>
         <h1 id="personal-saving"></h1>
-        <div id="donutChart" style="width: 900px; height: 500px"></div>
+        <div id="donutChart" style= " height: 500px"></div>
       </div>
       <!-- Mike's Old Map -->
       <!-- <div id="chart_div"></div> -->
@@ -535,14 +538,4 @@
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="scripts/script.js" async></script>
   </body>
-
-  <!-- Large Black Box at the end of page -->
-  <!-- <iframe
-    width="600"
-    height="450"
-    style="border: 0"
-    loading="lazy"
-    allowfullscreen
-    src="https://www.google.com/maps/embed/v1/view?center=...&zoom=...&key=..."
-  ></iframe> -->
 </html>
