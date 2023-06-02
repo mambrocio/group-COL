@@ -34,29 +34,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-}
-
-.container {
-  width: 85%;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.container h1 {
-  opacity: 0%;
-  animation-duration: 1s;
-  animation-name: slideInUp;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-body {
-  font-family: "Domine", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans- serif;
-}
-
-html {
-  scroll-behavior: smooth;
+  width: fit-content;
 }
 
 .container {
@@ -80,6 +58,9 @@ html {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-delay: 0.25s;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #3cd3ad7e;
 }
 
 a:visited {
