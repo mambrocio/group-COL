@@ -338,41 +338,41 @@ input:focus {
 
 @media screen and (max-width: 1024px) {
   .instructions li{
-
+    font-size: 20px;
   }
 
   form p{
-    text-size-adjust: 20px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .instructions li{
-
+    font-size: 22px;
   }
 
   form p{
-    text-size-adjust: 25px;
+    font-size: 22px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .instructions li{
-
+    font-size: 24px;
   }
 
   form p{
-    text-size-adjust: 30px;
+    font-size: 24px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .instructions li{
-
+    font-size: 24px;
   }
 
   form p{
-    text-size-adjust: 35px;
+    font-size: 25px;
   }
 }
 
@@ -384,63 +384,3 @@ input:focus {
 /* Set display type to blocks and set divs to width of 100%  
   Def adjust font size according to width
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1024px) {
-
-  .instructions li{
-
-  }
-
-  form p{
-
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-
-  .instructions li{
-
-  }
-
-  form p{
-
-  }
-
-}
-@media screen and (max-width: 425px) {
-
-  .instructions li{
-
-  }
-
-  form p{
-
-  }
-
-}
-
-@media screen and (max-width: 320px) {
-
-  .instructions li{
-
-  }
-
-  form p{
-
-  }
-
-}
-
