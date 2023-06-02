@@ -278,7 +278,7 @@ form p {
   width: 55%;
 }
 
-.for-two {
+.odd-row{
   background-color: #a2c3a4;
 }
 
@@ -323,6 +323,10 @@ input:focus {
   text-align: center;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 /* Media Query for Responsive  */
 
