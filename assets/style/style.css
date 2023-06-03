@@ -59,11 +59,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
-  width: 85%;
-  align-items: center;
-  margin: 0 auto;
-}
 
 .container h1 {
   opacity: 0%;
@@ -94,7 +89,7 @@ a:hover {
 
 .hero {
   background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
-  width: 100%;
+  ;
   padding-bottom: 60%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -217,17 +212,15 @@ a {
 /* Section 1 */
 
 .form-section {
-  display: flex;
-  flex-flow: row wrap;
-  flex-wrap: wrap;
-
   padding-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 5.3%;
 }
 
 .instructions {
   height: 50%;
-  width: 40%;
+
   padding: 30px;
   font-size: var(--small);
   border-radius: 20px;
@@ -245,7 +238,7 @@ select {
 }
 
 form {
-  width: 60%;
+ 
   opacity: 0%;
   border: 1px solid black;
   padding: 25px;
@@ -282,7 +275,7 @@ form p {
   width: 55%;
 }
 
-.for-two {
+.odd-row{
   background-color: #a2c3a4;
 }
 
@@ -300,9 +293,6 @@ form p {
   margin-bottom: 28px;
 }
 
-.personal-budget {
-  display: flex;
-}
 
 .sub1,
 .sub2 {
@@ -336,7 +326,7 @@ canvas {
   margin-right: 1000px;
 }
 /*for mobile tablet devices*/
-@media only screen and (width: 820px) {
+/* @media only screen and (width: 820px) {
   .hero{
       padding-bottom: 70%;
       background-position: center; 
@@ -346,19 +336,19 @@ canvas {
   padding: 0;
   text-align: left;
 }
-}
+} */
 /*for mobile phone devices*/
-@media only screen and (max-width: 390px) {
+/* @media only screen and (max-width: 390px) {
   form {
     width: 100%;}
     .instructions{
       width: 100%;}
       .form-section {
         display: block;
-  }
+  } */
 /*Dark-mode for mobile device*/
 
-  body {
+  /* body {
     padding: 25px;
     background-color: white;
     color: black;
@@ -369,9 +359,9 @@ canvas {
     background-color: black;
     color: white;
   }
-}
+} */
 body {
-  background-color: var(--background-color);
+  background-color: var(--white);
   color: var(--text-color);
 }
 
