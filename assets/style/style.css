@@ -89,7 +89,7 @@ a:hover {
 
 .hero {
   background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
-
+  ;
   padding-bottom: 60%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -190,10 +190,7 @@ h1 {
   color: #0d1b2a;
 }
 
-.instructions {
-  display: flex;
-  flex-direction: column;
-}
+
 .instruction-title {
   justify-self: start;
   font-size: var(--small);
@@ -323,10 +320,51 @@ input:focus {
   text-align: center;
 }
 
-.dark-mode {
-  background-color: black;
-  color: white;
+#map{
 }
+canvas {
+  margin-right: 1000px;
+}
+/*for mobile tablet devices*/
+/* @media only screen and (width: 820px) {
+  .hero{
+      padding-bottom: 70%;
+      background-position: center; 
+}.hero p{
+  font-size: var(--medium);
+  width: 95%;
+  padding: 0;
+  text-align: left;
+}
+} */
+/*for mobile phone devices*/
+/* @media only screen and (max-width: 390px) {
+  form {
+    width: 100%;}
+    .instructions{
+      width: 100%;}
+      .form-section {
+        display: block;
+  } */
+/*Dark-mode for mobile device*/
+
+  /* body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+} */
+body {
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
 
 /* Media Query for Responsive  */
 
@@ -338,6 +376,15 @@ input:focus {
 /* Set display type to blocks and set divs to width of 100%  
   Def adjust font size according to width
 */
+
+
+
+
+
+
+
+
+
 
 
 

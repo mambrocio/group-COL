@@ -324,3 +324,10 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(document.querySelector(".instructions"));
 observer.observe(document.querySelector("form"));
+
+
+//added dark function for mobile layout//
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
