@@ -271,7 +271,10 @@ form.addEventListener("submit", function (event) {
               var $button = $("<button>")
                 .addClass("pastSearch")
                 .text(
-                  newSearch + ": " + singleCostOfLiving.toFixed(0) + " For One"
+                  newSearch +
+                    ": " +
+                    singleCostOfLiving.toFixed(0) +
+                    " Per Person"
                 );
               $(".search-history").append($button);
             }
@@ -325,7 +328,6 @@ form.addEventListener("submit", function (event) {
                 title: "Monthly Budget",
                 pieHole: 0.4,
                 backgroundColor: { fill: "transparent" },
-                color: "white",
               };
 
               var chart = new google.visualization.PieChart(
