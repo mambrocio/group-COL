@@ -1,19 +1,9 @@
-const switchButton = document.querySelector("#switch-button")
-
 function darkMode() {
-    // var element = document.body;
-    // element.classList.toggle("dark-mode");
-
-    const body = document.querySelector("body")
-    body.style.backgroundColor = "black";
+    let element = document.body;
+    element.classList.toggle("dark-mode");
     
-    const hero = document.querySelector(".hero")
-    hero.classList.remove("hero");
-    hero.classList.add("dark-hero");
-
-    const container = document.querySelector(".container")
-    container.classList.remove("container");
-    container.classList.add("dark-container");
+    let formBG = document.getElementById("options")
+    formBG.classList.toggle("dark-form")
+    let formColor=document.getElementsByClassName("questions")
+    formColor.classList.toggle(".p-dark")
  }
-
- switchButton.addEventListener("click", darkMode)
