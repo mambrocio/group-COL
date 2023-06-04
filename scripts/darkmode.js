@@ -7,3 +7,4 @@ function darkMode() {
     let formColor=document.getElementsByClassName("questions")
     formColor.classList.toggle(".p-dark")
  }
+ 

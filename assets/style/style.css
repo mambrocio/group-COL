@@ -59,7 +59,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .container h1 {
   opacity: 0%;
   animation-duration: 1s;
@@ -89,7 +88,6 @@ a:hover {
 
 .hero {
   background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
-  ;
   padding-bottom: 60%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -110,7 +108,7 @@ a:hover {
 }
 
 @keyframes slideInUp {
-    from {
+  from {
     transform: translateY(100%);
     opacity: 0%;
   }
@@ -190,7 +188,6 @@ h1 {
   color: #0d1b2a;
 }
 
-
 .instruction-title {
   justify-self: start;
   font-size: var(--small);
@@ -240,7 +237,6 @@ select {
 }
 
 form {
- 
   opacity: 0%;
   border: 1px solid black;
   padding: 25px;
@@ -277,7 +273,7 @@ form p {
   width: 55%;
 }
 
-.odd-row{
+.odd-row {
   background-color: #a2c3a4;
 }
 
@@ -294,7 +290,6 @@ form p {
   justify-content: center;
   margin-bottom: 28px;
 }
-
 
 .sub1,
 .sub2 {
@@ -322,7 +317,7 @@ input:focus {
   text-align: center;
 }
 
-#map{
+#map {
 }
 canvas {
   margin-right: 1000px;
