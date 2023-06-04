@@ -293,8 +293,7 @@ form p {
 
 #city-cost,
 #personal-cost,
-#personal-saving,
-#map {
+#personal-saving {
   width: 20vw;
   margin-top: 16px;
   display: flex;
