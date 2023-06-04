@@ -42,8 +42,9 @@ html {
   margin: 0 auto;
 }
 
-.container h1 {
+.hero h1 {
   opacity: 0%;
+  font-size: var(--medium);
   animation-duration: 1s;
   animation-name: slideInUp;
   animation-fill-mode: forwards;
@@ -59,6 +60,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .container h1 {
   opacity: 0%;
   animation-duration: 1s;
@@ -69,6 +71,7 @@ html {
 
 .hero-desc {
   opacity: 0%;
+
   animation-duration: 1s;
   animation-name: slideInUp;
   animation-fill-mode: forwards;
@@ -108,7 +111,7 @@ a:hover {
 }
 
 @keyframes slideInUp {
-  from {
+    from {
     transform: translateY(100%);
     opacity: 0%;
   }
@@ -169,16 +172,14 @@ p {
 }
 
 h1 {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   color: #17221e;
-  width: 30%;
   font-size: var(--medium);
   font-weight: 200;
 }
 
 .hero p {
+
   padding-top: 20px;
   font-size: var(--small);
   margin-left: auto;
@@ -188,6 +189,10 @@ h1 {
   color: #0d1b2a;
 }
 
+.instructions {
+  display: flex;
+  flex-direction: column;
+}
 .instruction-title {
   justify-self: start;
   font-size: var(--small);
@@ -226,15 +231,31 @@ a {
 
 input,
 select {
+  background-color: transparent ;
   text-align: center;
   border-radius: 6px;
   padding: 5px 10px 5px 10px;
   border: none;
   height: 100%;
   outline: none;
+  background-color: transparent;
+}
+
+
+input::after,
+select::after{
+  background-color: transparent ;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
 }
 
 form {
+  background-color: transparent;
   opacity: 0%;
   border: 1px solid black;
   padding: 25px;
@@ -271,7 +292,7 @@ form p {
   width: 55%;
 }
 
-.odd-row {
+.odd-row{
   background-color: #a2c3a4;
 }
 
@@ -282,12 +303,12 @@ form p {
 #city-cost,
 #personal-cost,
 #personal-saving {
-  width: 20vw;
   margin-top: 16px;
   display: flex;
   justify-content: center;
   margin-bottom: 28px;
 }
+
 
 .sub1,
 .sub2 {
@@ -313,60 +334,33 @@ input:focus {
 
 .result {
   text-align: center;
+  display: none;
 }
 
-#map {
+.dark-mode {
+  background-color: #171b19;
+  color: whitesmoke;
 }
-canvas {
-  margin-right: 1000px;
+
+.dark-form{
+  background-color: #a5dec9 ;
+
 }
-/*for mobile tablet devices*/
-/* @media only screen and (width: 820px) {
-  .hero{
-      padding-bottom: 70%;
-      background-position: center; 
-}.hero p{
+
+.resultDark{
+  color: whitesmoke;
+}
+
+.resultTab{
+  display: block
+}
+
+.resultTab h1{
   font-size: var(--medium);
-  width: 95%;
-  padding: 0;
-  text-align: left;
-}
-} */
-/*for mobile phone devices*/
-/* @media only screen and (max-width: 390px) {
-  form {
-    width: 100%;}
-    .instructions{
-      width: 100%;}
-      .form-section {
-        display: block;
-  } */
-/*Dark-mode for mobile device*/
-
-/* body {
-    padding: 25px;
-    background-color: white;
-    color: black;
-    font-size: 25px;
-  }
-  
-  .dark-mode {
-    background-color: black;
-    color: white;
-  }
-} */
-body {
-  background-color: var(--white);
-  color: var(--text-color);
 }
 
-/* Media Query for Responsive  */
+#themeSwitch::before{ 
+  content: "☀"
+}
 
-/* For Laptops Large and Laptop add a Flex direction wrap and set the width to instruction and form to 46%
-  Set font to a smaller size if need be
-*/
 
-/* For Tablet and Mobile */
-/* Set display type to blocks and set divs to width of 100%  
-  Def adjust font size according to width
-*/
