@@ -60,7 +60,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .container h1 {
   opacity: 0%;
   animation-duration: 1s;
@@ -111,7 +110,7 @@ a:hover {
 }
 
 @keyframes slideInUp {
-    from {
+  from {
     transform: translateY(100%);
     opacity: 0%;
   }
@@ -179,7 +178,6 @@ h1 {
 }
 
 .hero p {
-
   padding-top: 20px;
   font-size: var(--small);
   margin-left: auto;
@@ -229,9 +227,28 @@ a {
   background-color: #3cd3ad;
 }
 
+.pastSearch {
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  box-shadow: 4px 4px lightblue;
+}
+
+.pastSearch:hover {
+  color: #131214;
+  font-weight: 500;
+  background: -webkit-linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  background: -o-linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  background: -moz-linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  background: linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  box-shadow: 0 0 10px #3cd3ad, inset 0 0 5px #fff, inset 0 0 50px #85a187,
+    inset 0 0 50px white;
+}
+
 input,
 select {
-  background-color: transparent ;
+  background-color: transparent;
   text-align: center;
   border-radius: 6px;
   padding: 5px 10px 5px 10px;
@@ -241,10 +258,9 @@ select {
   background-color: transparent;
 }
 
-
 input::after,
-select::after{
-  background-color: transparent ;
+select::after {
+  background-color: transparent;
   text-align: center;
   border-radius: 6px;
   padding: 5px 10px 5px 10px;
@@ -292,7 +308,7 @@ form p {
   width: 55%;
 }
 
-.odd-row{
+.odd-row {
   background-color: #a2c3a4;
 }
 
@@ -308,7 +324,6 @@ form p {
   justify-content: center;
   margin-bottom: 28px;
 }
-
 
 .sub1,
 .sub2 {
@@ -342,25 +357,22 @@ input:focus {
   color: whitesmoke;
 }
 
-.dark-form{
-  background-color: #a5dec9 ;
-
+.dark-form {
+  background-color: #a5dec9;
 }
 
-.resultDark{
+.resultDark {
   color: whitesmoke;
 }
 
-.resultTab{
-  display: block
+.resultTab {
+  display: block;
 }
 
-.resultTab h1{
+.resultTab h1 {
   font-size: var(--medium);
 }
 
-#themeSwitch::before{ 
-  content: "☀"
+#themeSwitch::before {
+  content: "☀";
 }
-
-
