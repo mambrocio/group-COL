@@ -8,6 +8,7 @@ var inputLon;
 var childCare;
 var averageRent;
 
+
 // // pull the search input from index page and give it a variable in our Java Script
 // var urlParams = new URLSearchParams(window.location.search);
 // var searchQuery = urlParams.get("searchQuery");
@@ -364,3 +365,10 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(document.querySelector(".instructions"));
 observer.observe(document.querySelector("form"));
+
+
+//added dark function for mobile layout//
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
