@@ -8,6 +8,7 @@ var inputLon;
 var childCare;
 var averageRent;
 
+
 // // pull the search input from index page and give it a variable in our Java Script
 // var urlParams = new URLSearchParams(window.location.search);
 // var searchQuery = urlParams.get("searchQuery");
@@ -71,7 +72,6 @@ form.addEventListener("submit", function (event) {
   };
 
   var searchInput = document.getElementById("search-bar").value;
-  
   //the selected currency
   var currency = document.getElementById("displayCurrency").value;
 
@@ -204,7 +204,6 @@ form.addEventListener("submit", function (event) {
           console.log(exactCost);
 
           let badBudget = totalCost - income;
-          localStorage.setItem(searchInput, trueCostOfLiving);
 
           // resutlts cost of living in your city
           var generalCost = document.getElementById("city-cost");
@@ -325,3 +324,10 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(document.querySelector(".instructions"));
 observer.observe(document.querySelector("form"));
+
+
+//added dark function for mobile layout//
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
