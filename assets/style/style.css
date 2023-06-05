@@ -199,6 +199,7 @@ h1 {
   font-size: var(--tiny);
   padding: 10%;
   line-height: 1.8;
+  list-style-type: circle
 }
 
 .arrow {
