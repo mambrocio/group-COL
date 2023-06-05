@@ -83,7 +83,7 @@ a {
   padding-bottom: 60%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: top center;
   border-radius: 0% 0% 2% 2%;
   max-width: 100%;
   height: auto;
@@ -375,3 +375,82 @@ input:focus {
 .toggle-on{
   background-color: antiquewhite;
 }
+
+@media screen and (max-width: 1024px) {
+  .instructions li{
+    font-size: 20px;
+  }
+
+  form p{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero{
+    background-position: bottom;
+  }
+
+  .hero p{
+    font-size: 25px;
+    width: 90%;
+    color: #fafafa;
+    padding-bottom: 8px;
+  }
+
+  .hero-desc{
+    background-color: #8baa9eb8;
+
+  }
+
+  .instructions li{
+    font-size: 24px;
+  }
+
+  .question p{
+    font-size: 25px;
+  }
+
+    input, select{
+      font-size: 19px;
+    }
+    
+   g text{
+      font-size: 18px;
+    }
+    svg{
+      width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+  .hero{
+    background-position: bottom;
+  }
+
+  .hero p{
+    font-size: 14px;
+    color: #fafafa;
+    padding-bottom: 8px;
+  }
+
+  .hero-desc{
+    background-color: #8baa9eb8;
+
+  }
+
+  .instructions li{
+    font-size: 12px;
+  }
+
+  .question p{
+    font-size: 15px;
+  }
+
+    input, select{
+      font-size: 12px;
+    }
+
+  }
