@@ -42,14 +42,6 @@ html {
   margin: 0 auto;
 }
 
-.hero h1 {
-  opacity: 0%;
-  font-size: var(--medium);
-  animation-duration: 1s;
-  animation-name: slideInUp;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
 
 body {
   font-family: "Domine", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -60,79 +52,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-.container h1 {
-  opacity: 0%;
-  animation-duration: 1s;
-  animation-name: slideInUp;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-}
-
-.hero-desc {
-  opacity: 0%;
-
-  animation-duration: 1s;
-  animation-name: slideInUp;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-delay: 0.25s;
-}
-
-a:visited {
-  color: var(--black);
-}
-
-a:hover {
-  color: #c4f1be;
-}
-
-/*  Hero Styles */
-
-.hero {
-  background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
-  padding-bottom: 60%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  border-radius: 0% 0% 2% 2%;
-  max-width: 100%;
-  height: auto;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .instructions-animation {
-    animation-duration: 1s;
-    animation-name: slideInRight;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-delay: 0s;
-  }
-}
-
-@keyframes slideInUp {
-    from {
-    transform: translateY(100%);
-    opacity: 0%;
-  }
-
-  to {
-    transform: translateY(0%);
-    opacity: 100%;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(-100%);
-    opacity: 0%;
-  }
-
-  to {
-    transform: translateX(0%);
-    opacity: 100%;
-  }
-}
 
 .clearfix:after {
   content: "";
@@ -152,7 +71,56 @@ p {
   color: #201e50;
 }
 
+
+
 /*  Hero Styles */
+
+.hero {
+  background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
+  padding-bottom: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  border-radius: 0% 0% 2% 2%;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  opacity: 0%;
+  font-size: var(--medium);
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.container h1 {
+  opacity: 0%;
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+
+.hero-desc {
+  opacity: 0%;
+
+  animation-duration: 1s;
+  animation-name: slideInUp;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.25s;
+}
+
+a:visited {
+  color: var(--black);
+}
+
+a:hover {
+  color: #c4f1be;
+}
 
 .hero {
   background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
@@ -189,26 +157,47 @@ h1 {
   color: #0d1b2a;
 }
 
-.instructions {
-  display: flex;
-  flex-direction: column;
-}
-.instruction-title {
-  justify-self: start;
-  font-size: var(--small);
-}
-.instruction-list {
-  font-size: var(--tiny);
-  padding: 10%;
-  line-height: 1.8;
-}
-
 .arrow {
   transform: rotate(90deg);
 }
 
 a {
   text-decoration: none;
+}
+
+/* Animation Sides */
+@media (prefers-reduced-motion: no-preference) {
+  .instructions-animation {
+    animation-duration: 1s;
+    animation-name: slideInRight;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes slideInUp {
+    from {
+    transform: translateY(100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
 }
 
 /* Section 1 */
@@ -227,6 +216,20 @@ a {
   font-size: var(--small);
   border-radius: 20px;
   background-color: #3cd3ad;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+}
+.instruction-title {
+  justify-self: start;
+  font-size: var(--small);
+}
+.instruction-list {
+  font-size: var(--tiny);
+  padding: 10%;
+  line-height: 1.8;
 }
 
 input,
@@ -296,9 +299,7 @@ form p {
   background-color: #a2c3a4;
 }
 
-.result {
-  padding-left: 50px;
-}
+/* Result Block */
 
 #city-cost,
 #personal-cost,
@@ -308,7 +309,6 @@ form p {
   justify-content: center;
   margin-bottom: 28px;
 }
-
 
 .sub1,
 .sub2 {
@@ -359,8 +359,5 @@ input:focus {
   font-size: var(--medium);
 }
 
-#themeSwitch::before{ 
-  content: "☀"
-}
 
 
