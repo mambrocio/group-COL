@@ -71,6 +71,9 @@ p {
   color: #201e50;
 }
 
+a {
+  text-decoration: none;
+}
 
 
 /*  Hero Styles */
@@ -87,8 +90,10 @@ p {
 }
 
 .hero h1 {
-  opacity: 0%;
+  text-align: center;
+  color: #17221e;
   font-size: var(--medium);
+  font-weight: 200;
   animation-duration: 1s;
   animation-name: slideInUp;
   animation-fill-mode: forwards;
@@ -106,7 +111,6 @@ p {
 
 .hero-desc {
   opacity: 0%;
-
   animation-duration: 1s;
   animation-name: slideInUp;
   animation-fill-mode: forwards;
@@ -122,15 +126,6 @@ a:hover {
   color: #c4f1be;
 }
 
-.hero {
-  background-image: url(../images/pexels-karolina-grabowska-4386289.jpg);
-  width: 100%;
-  padding-bottom: 90%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 0% 0% 2% 2%;
-}
 
 .logo {
   padding: 1% 0 2% 0;
@@ -139,15 +134,8 @@ a:hover {
   margin-right: auto;
 }
 
-h1 {
-  text-align: center;
-  color: #17221e;
-  font-size: var(--medium);
-  font-weight: 200;
-}
 
 .hero p {
-
   padding-top: 20px;
   font-size: var(--small);
   margin-left: auto;
@@ -161,11 +149,127 @@ h1 {
   transform: rotate(90deg);
 }
 
-a {
-  text-decoration: none;
+/*  Instructions  */
+
+.instructions {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  font-size: var(--small);
+  border-radius: 20px;
+  background-color: #3cd3ad;
 }
 
-/* Animation Sides */
+.instruction-title {
+  justify-self: start;
+  font-size: var(--small);
+}
+.instruction-list {
+  font-size: var(--tiny);
+  padding: 4%;
+  line-height: 1.8;
+}
+
+
+/* Instruction 1 */
+
+form {
+  background-color: transparent;
+  opacity: 0%;
+  border: 1px solid black;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 10px 10px lightblue;
+}
+
+.form-section {
+  padding-top: 7%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5.3%;
+}
+
+.pastSearch {
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  box-shadow: 4px 4px lightblue;
+}
+
+.pastSearch:hover {
+  color: #131214;
+  font-weight: 500;
+  background: -webkit-linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  background: -o-linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  background: -moz-linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  background: linear-gradient(left, #dedede, #85a187, #3cd3ad, white);
+  box-shadow: 0 0 10px #3cd3ad, inset 0 0 5px #fff, inset 0 0 50px #85a187,
+  inset 0 0 50px white;
+}
+
+input,
+select {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+input::after,
+select::after {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+
+/* Form Block*/
+
+::placeholder {
+  font-size: var(--tiny);
+}
+
+form p {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.q-a {
+  display: flex;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 1px solid black;
+}
+
+.question {
+  width: 45%;
+  padding: 5px;
+  border-left: 1px solid black;
+}
+
+.answer {
+  border-left: 2px solid white;
+  width: 55%;
+}
+
+.odd-row {
+  background-color: #a2c3a4;
+}
+
+
+/* Animation Triggers */
+
 @media (prefers-reduced-motion: no-preference) {
   .instructions-animation {
     animation-duration: 1s;
@@ -198,105 +302,6 @@ a {
     transform: translateX(0%);
     opacity: 100%;
   }
-}
-
-/* Section 1 */
-
-.form-section {
-  padding-top: 7%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 5.3%;
-}
-
-.instructions {
-  height: 50%;
-
-  padding: 30px;
-  font-size: var(--small);
-  border-radius: 20px;
-  background-color: #3cd3ad;
-}
-
-.instructions {
-  display: flex;
-  flex-direction: column;
-}
-.instruction-title {
-  justify-self: start;
-  font-size: var(--small);
-}
-.instruction-list {
-  font-size: var(--tiny);
-  padding: 10%;
-  line-height: 1.8;
-}
-
-input,
-select {
-  background-color: transparent ;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 10px 5px 10px;
-  border: none;
-  height: 100%;
-  outline: none;
-  background-color: transparent;
-}
-
-
-input::after,
-select::after{
-  background-color: transparent ;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 10px 5px 10px;
-  border: none;
-  height: 100%;
-  outline: none;
-  background-color: transparent;
-}
-
-form {
-  background-color: transparent;
-  opacity: 0%;
-  border: 1px solid black;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 10px 10px lightblue;
-}
-
-/* Form Block*/
-
-::placeholder {
-  font-size: var(--tiny);
-}
-
-form p {
-  font-size: 20px;
-  text-transform: capitalize;
-}
-
-.q-a {
-  display: flex;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  border-right: 1px solid black;
-}
-
-.question {
-  width: 45%;
-  padding: 5px;
-  border-left: 1px solid black;
-}
-
-.answer {
-  border-left: 2px solid white;
-  width: 55%;
-}
-
-.odd-row{
-  background-color: #a2c3a4;
 }
 
 /* Result Block */
@@ -337,27 +342,36 @@ input:focus {
   display: none;
 }
 
+/* Dark Mode Modifiers */
 .dark-mode {
   background-color: #171b19;
   color: whitesmoke;
 }
 
-.dark-form{
-  background-color: #a5dec9 ;
-
+.dark-form {
+  background-color: #a5dec9;
 }
 
-.resultDark{
+.resultDark {
   color: whitesmoke;
 }
 
-.resultTab{
-  display: block
+.resultTab {
+  display: block;
 }
 
-.resultTab h1{
+.resultTab h1 {
   font-size: var(--medium);
 }
 
+.theme-toggle{
+  margin-top: 30px;
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #181616;
+}
 
-
+.toggle-on{
+  background-color: antiquewhite;
+}

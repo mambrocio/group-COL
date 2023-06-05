@@ -75,10 +75,13 @@
             and receive a tailored budget saving assessment for a different city
             or state.
           </li>
+          <li>Past searches will be saved down in the section </li>
+          <li><button class="theme-toggle" id ="toggle" onclick="darkMode()">💡</button></li>
         </ul>
-        <button id="themeSwitch" onclick="darkMode()">🌙</button>
+        <h2>Past Searches</h2>
+        <ul class="search-history"></ul>  
       </div>
-
+      
       <!-- form section  -->
 
       <form
@@ -483,11 +486,10 @@
             />
           </div>
         </div>
-        <a href="#resultAnchor">See Results Here</a>
       </form>
     </section>
 
-    <section id="resultAnchor" class="resultTab result">
+    <section class="resultTab result">
       <div class="cost-of-city">
         <strong id="city-title"></strong>
         <h1 id="city-cost"></h1>

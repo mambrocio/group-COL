@@ -8,6 +8,9 @@ function darkMode() {  // Transforms back ground and text to be replaced with a 
   formBG.classList.toggle("dark-form")
 
 
+  let lightMode = document.getElementById("toggle");
+  lightMode.classList.toggle("toggle-on")
+
   // Result block is then applied with CSS Dark Mode 
   let resultStrong = document.getElementById("city-title")
   resultStrong.classList.toggle("resultDark")
