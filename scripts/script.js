@@ -8,7 +8,6 @@ var inputLon;
 var childCare;
 var averageRent;
 
-
 // // pull the search input from index page and give it a variable in our Java Script
 // var urlParams = new URLSearchParams(window.location.search);
 // var searchQuery = urlParams.get("searchQuery");
@@ -50,6 +49,17 @@ function drawChart() {
     ["Pepperoni", 2],
   ]);
 
+  // get local storage test
+  // Retrieve and display past search inputs from local storage
+  var existingData = localStorage.getItem("cityBudget");
+  if (existingData) {
+    var parsedData = JSON.parse(existingData);
+
+    parsedData.forEach(function (newSearch) {
+      var $button = $("<button>").addClass("pastSearch").text(newSearch);
+      $(".search-history").append($button);
+    });
+  }
   // Set chart options
   var options = { title: "Current Spnding", width: 400, height: 300 };
 
@@ -72,6 +82,7 @@ form.addEventListener("submit", function (event) {
   };
 
   var searchInput = document.getElementById("search-bar").value;
+
   //the selected currency
   var currency = document.getElementById("displayCurrency").value;
 
@@ -240,6 +251,33 @@ form.addEventListener("submit", function (event) {
             console.log(
               "budget buddy recommends you to save:  " + safeSavings + "$"
             );
+            //set local storage test
+            var newSearch = searchInput.toLowerCase();
+
+            var existingData = localStorage.getItem("cityBudget");
+
+            // Parse the existing data into an object or array
+            var parsedData = existingData ? JSON.parse(existingData) : [];
+
+            // Check if the new search input already exists in the array
+            if (!parsedData.includes(newSearch)) {
+              // Add the new search input to the array
+              parsedData.push(newSearch);
+
+              // Store the updated data back into local storage
+              localStorage.setItem("cityBudget", JSON.stringify(parsedData));
+
+              // Append the new search input as a button to the search container
+              var $button = $("<button>")
+                .addClass("pastSearch")
+                .text(
+                  newSearch +
+                    ": " +
+                    singleCostOfLiving.toFixed(0) +
+                    " Per Person"
+                );
+              $(".search-history").append($button);
+            }
 
             // cost breakdown pie chart
             google.charts.load("current", { packages: ["corechart"] });
@@ -264,6 +302,7 @@ form.addEventListener("submit", function (event) {
               var options = {
                 title: "Cost Breakdown",
                 is3D: false,
+                backgroundColor: { fill: "transparent" },
               };
 
               var chart = new google.visualization.PieChart(
@@ -288,6 +327,7 @@ form.addEventListener("submit", function (event) {
               var options = {
                 title: "Monthly Budget",
                 pieHole: 0.4,
+                backgroundColor: { fill: "transparent" },
               };
 
               var chart = new google.visualization.PieChart(
@@ -324,10 +364,3 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(document.querySelector(".instructions"));
 observer.observe(document.querySelector("form"));
-
-
-//added dark function for mobile layout//
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}

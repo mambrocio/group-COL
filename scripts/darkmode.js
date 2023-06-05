@@ -1,19 +1,37 @@
-const switchButton = document.querySelector("#switch-button")
-
 function darkMode() {
-    // var element = document.body;
-    // element.classList.toggle("dark-mode");
+  let element = document.body;
+  element.classList.toggle("dark-mode");
 
-    const body = document.querySelector("body")
-    body.style.backgroundColor = "black";
-    
-    const hero = document.querySelector(".hero")
-    hero.classList.remove("hero");
-    hero.classList.add("dark-hero");
+  let formBG = document.getElementById("options")
+  formBG.classList.toggle("dark-form")
 
-    const container = document.querySelector(".container")
-    container.classList.remove("container");
-    container.classList.add("dark-container");
- }
+  let resultStrong = document.getElementById("city-title")
+  resultStrong.classList.toggle("resultDark")
 
- switchButton.addEventListener("click", darkMode)
+  let mapTitle = document.getElementById("location")
+  mapTitle.classList.toggle("resultDark")
+
+  let resultCost = document.getElementById("city-cost")
+  resultCost.classList.toggle("resultDark")
+
+  let resultPersonal = document.getElementById("personal-title")
+  resultPersonal.classList.toggle("resultDark")
+
+  let finalCost = document.getElementById("personal-cost")
+  finalCost.classList.toggle("resultDark")
+
+  let resultSaving = document.getElementById("saving-title")
+  resultSaving.classList.toggle("resultDark")
+
+  let finalSaving = document.getElementById("personal-saving")
+  finalSaving.classList.toggle("resultDark")
+
+  mapboxgl.accessToken =
+      "pk.eyJ1Ijoiam9zaHVhdmFuZXBzIiwiYSI6ImNsaTQ0N3FvZzE0emEzZW8wbmMwdmNwbHYifQ.hha62sCgSu3bcZlJbj89gg";
+    const map = new mapboxgl.Map({
+      container: "map", // container ID
+      style: "mapbox://styles/mapbox/navigation-night-v1", // style URL
+      center: [inputLon, inputLat], // starting position [lng, lat]
+      zoom: 9, // starting zoom
+    });
+}
