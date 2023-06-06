@@ -1,4 +1,4 @@
-## "Buget Buddy"
+# "Buget Buddy"
 
 ## Description
 Budget Buddy - place where everyone will be presented with opportunity to understand the financial implications of their chosen location and can confidently navigate their financial journey creating solid foundation for a secure future. Our mission is to empower individuals to make
@@ -29,9 +29,14 @@ One place were we can say for sure we have been successful is making our APIs wo
 The main challenges that we faced were conflicts due to Github. Learning to coordinate when  and who should push and pull aspects of the repo, at times certain pushes were not saved properly and overwrite progress and a few times
 
 ## Demonstration of the Project
-Currect Website: 
-Tablet Version:
-Mobile Version:
+### Currect Website:
+### ![Screenshot 2023-06-06 113841](https://github.com/mambrocio/group-COL/assets/111782130/8778804d-c52d-49a9-83cf-a395cb7df611)
+
+### Tablet Version:
+### ![Screenshot 2023-06-06 114037](https://github.com/mambrocio/group-COL/assets/111782130/5e360a25-3e43-44b7-b494-10f8cdecb005)
+
+### Mobile Version:
+### ![Screenshot 2023-06-06 113947](https://github.com/mambrocio/group-COL/assets/111782130/05ac4145-c956-4e76-ac5e-79830ba2a699)
 
 ## Link To Deployment
 The following link would take you to an actual website where you can try out Budget Buddy for yourself: https://mambrocio.github.io/group-COL/
